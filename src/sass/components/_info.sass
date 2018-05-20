@@ -1,0 +1,45 @@
+.info
+	&__header
+		padding-top: 30px
+		padding-bottom: 30px
+		text-align: center
+	&__title
+		margin-bottom: 7px
+	&__body
+		padding-top: 37px
+		padding-bottom: 30px
+		background: #efefef
+	&__items
+		font-size: 0
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		padding: 35px 20px
+		width: 25%
+	&__figure
+		position: relative
+		margin: 0 auto 29px
+		border-radius: 50%
+		width: 188px
+		height: 188px
+		background: $white
+		+vertical
+		&:after
+			content: ''
+			position: absolute
+			top: 7px
+			left: 7px
+			right: 7px
+			bottom: 7px
+			border: 1px solid gainsboro
+			border-radius: 50%
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		fill: $blue
+	&__subtitle
+		margin: 0 auto
+		max-width: 210px
+		+f(12px, null, 19px)
+		text-transform: uppercase

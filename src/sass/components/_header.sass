@@ -1,0 +1,89 @@
+.header
+	padding: 18px 30px 27px
+	border-bottom: 1px solid #dcdcdc
+	font-size: 0
+	&__inner
+		margin: 0 auto
+		max-width: 1540px
+		+clr
+	&__btns
+		float: left
+		padding: 8px 20px 0 78px
+	&__btn 
+		margin: 5px
+	&__actions
+		float: right
+		padding: 10px 0 1px
+		margin: 0 -16px 0 29px
+	&__action 
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 10px 16px
+		height: 40px
+		+vertical 
+	&__icon 
+		display: inline-block
+		vertical-align: middle
+		font-size: 20px
+	&__like
+		font-size: 17px
+	&__cart 
+		font-size: 19px
+	&__sticker
+		position: absolute
+		top: -3px
+		right: 0
+		border-radius: 13px
+		min-width: 25px
+		color: $white
+		background: $orange
+		+f(12px, 400, 25px)
+	&__info
+		float: right
+		padding: 13px 0 0 
+	&__phone
+		display: block
+		color: inherit
+		+f(22px, 700, 19px)
+		text-transform: uppercase
+	&__schedule
+		margin-top: 9px
+		opacity: 0.5
+		+f(12px, 400, 1)
+
+
+.logo
+	float: left
+	font-size: 0
+
+.nav
+	overflow: visible
+	text-align: center
+	padding: 13px 20px 5px 0
+	&__item
+		display: inline-block
+		vertical-align: top
+	&__link 
+		display: block
+		padding: 10px 15px 11px
+		color: currentColor
+		+f(14px, 400, 1)
+		+hover
+			span 
+				&:before
+					opacity: 1
+					transform: translate3d(0,0,0)
+		span 
+			position: relative
+			display: block
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				right: 0
+				bottom: -4px
+				border-bottom: 1px solid currentColor
+				opacity: 0
+				transform: translate3d(0,10px,0)
+				transition: opacity 0.3s, transform 0.3s

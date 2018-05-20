@@ -1,0 +1,52 @@
+.banner
+	display: block
+	color: $white
+	&_blue
+		background-image: linear-gradient(29deg, #0caafe 0%, #2df0f2 100%)
+	&_green
+		background-image: linear-gradient(29deg, #00ab89 0%, #3affd3 100%)
+	&_orange
+		background-image: linear-gradient(29deg, #ff881f 0%, #ffcf3c 100%)
+	&__inner
+		position: relative
+		height: 217px
+	&__content
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		padding: 21px 30px 
+	&__title
+		+f(18px, 700, 30px)
+		+text-overflow
+	&__link
+		position: relative
+		display: inline-block
+		vertical-align: top
+		+f(14px, 400, 30px)
+		+text-overflow
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: 5px
+			border-bottom: 1px solid rgba($white, 0.5)
+	&__baxi
+		position: absolute
+		top: 45px
+		left: 30px
+	&__item
+		position: absolute
+		top: 45px
+		right: 44px
+		~ .banner__content
+			padding-right: 130px
+	&__rehau
+		position: absolute
+		top: 29px
+		left: 30px
+	&__card
+		position: absolute
+		top: 14px
+		left: 30px

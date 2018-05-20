@@ -1,0 +1,37 @@
+<!-- begin header -->
+<header class="header">
+	<div class="header__inner">
+		<a href="#" class="logo">
+			<img src="img/logo.jpg" alt="Тепловик">
+		</a>
+		<div class="header__btns">
+			<button class="btn btn_blue header__btn">Каталог</button>
+			<button class="btn btn_blue header__btn">Бренды</button>
+			<button class="btn btn_orange header__btn">Акции</button>
+		</div>
+		<div class="header__actions">
+			{% for item in [ 'user', 'like', 'business', 'cart' ] %}
+			    <a href="#" class="header__action">
+			    	{% if item == 'cart' %}
+						<span class="header__sticker">4</span>
+			    	{% endif %}
+			    	{{mixins.icon(item, 'header__icon header__' + item)}}
+			    </a>
+			{% endfor %}
+		</div>
+		<div class="header__info">
+			<a href="tel:+74994504182" class="header__phone">+7 (499) 450-41-82</a>
+			<div class="header__schedule">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
+		</div>
+		<nav class="nav">
+			<ul class="nav__list">
+				{% for item in [ 'Доставка', 'Оплата', 'О компании', 'Контакты' ] %}
+					<li class="nav__item">
+						<a href="#" class="nav__link"><span>{{item}}</span></a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>
+<!-- end header -->

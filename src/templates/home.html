@@ -1,0 +1,20 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="main">
+		<div class="inner">
+			<div class="section">
+				{% include 'partials/components/_search.html' %}
+			</div>
+			<div class="section">
+				{% include 'partials/components/_banners.html' %}
+			</div>
+		</div>
+		{% include 'partials/components/_info.html' %}
+	</div>
+
+{% endblock %}
