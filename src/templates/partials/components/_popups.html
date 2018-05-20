@@ -1,0 +1,31 @@
+<!-- begin popup -->
+<div class="popup">
+	<div class="popup__inner">
+		<div class="popup__title">Регистрация</div>
+		<div class="popup-tabs">
+			<ul class="popup-tabs__list">
+				<li class="popup-tabs__item"><a href="#" class="popup-tabs__link">Физлицо</a></li>
+				<li class="popup-tabs__item"><a href="#" class="popup-tabs__link">Юрлицо</a></li>
+			</ul>
+			<div class="popup-tabs__content" style="display: block;">
+				<form action="/" class="form">
+					<div class="form-control">
+						<div class="input">
+							<input id="e-mail" type="text">
+							<label for="e-mail" class="label">E-mail</label>
+							<div class="icon-valid">
+								{{ mixins.icon('') }}
+							</div>
+							<div class="error-text">Invalid Email</div>
+						</div>
+						<div class="tooltip">
+							<div class="tooltip__icon js-tooltip" title="This is my image's tooltip message!">{{ mixins.icon('question') }}</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="popup-tabs__content"></div>
+		</div>
+	</div>
+</div>
+<!-- end popup -->
