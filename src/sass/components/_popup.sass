@@ -2,10 +2,11 @@
 	position: fixed
 	top: 0
 	left: 0
+	padding: 15px
 	z-index: 100
 	width: 100%
 	height: 100%
-	background-color: rgba(0,0,0,0.8)
+	background-color: rgba(#000, .5)
 	+vertical
 	&__inner
 		padding: 34px 34px 29px 34px
@@ -17,6 +18,29 @@
 		background-color: $white 
 	&__title
 		margin-bottom: 15px
-		font-family: $familyMontserrat 
+		font-family: $montserrat 
 		+f(21px,500,1.4)
 		text-align: center
+
+.popup-tabs
+	&__list
+		padding: 0 34px
+		margin: 0 -34px -1px
+		font-size: 0
+		text-align: center
+		border-bottom: 1px solid $borderGray
+	&__item
+		padding: 4px 38px 8px
+		color: rgba($dark, 0.7)
+		font-family: $opensans
+		+f(14px,400,1.4)
+		user-select: none
+		vertical-align: top
+		border-bottom: 3px solid transparent
+		transition: border-color .3s, color .3s
+		display: inline-block
+		+hover
+			color: $dark
+		&.is-active
+			color: $dark
+			border-color: $blue 

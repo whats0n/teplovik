@@ -81,119 +81,310 @@
       <!-- begin popup -->
       <div class="popup">
         <div class="popup__inner">
+          <button class="popup__close" type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
           <div class="popup__title">Регистрация</div>
-          <div class="popup-tabs">
+          <!-- begin popup-tabs -->
+          <div class="popup-tabs" data-tabs>
             <ul class="popup-tabs__list">
-              <li class="popup-tabs__item">
-                <a href="#" class="popup-tabs__link">Физлицо</a>
-              </li>
-              <li class="popup-tabs__item">
-                <a href="#" class="popup-tabs__link">Юрлицо</a>
-              </li>
+              <li class="popup-tabs__item is-active" data-tabs-control="tab-1">Физлицо</li>
+              <li class="popup-tabs__item" data-tabs-control="tab-2">Юрлицо</li>
             </ul>
-            <div class="popup-tabs__content" style="display: block;">
-              <form action="/" class="form">
-                <div class="form-control">
-                  <div class="input js-input is-error">
-                    <input id="e-mail" type="text" value="ivanko@gmailer.com">
-                    <label for="e-mail" class="label">E-mail</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+            <div class="popup-tabs__wrap" data-tabs-wrapper>
+              <div class="popup-tabs__container is-open" data-tabs-container="tab-1">
+                <form action="/" class="form">
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input is-error">
+                      <input id="e-mail" type="text" value="ivanko@gmailer.com">
+                      <label for="e-mail" class="label">E-mail</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Email</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Email</div>
                   </div>
-                  <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
-                    <svg class="icon icon-question ">
-                      <use xlink:href="img/sprite.svg#icon-question"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <div class="input js-input is-valid">
-                    <input id="first-name" type="text" value="Сергей">
-                    <label for="first-name" class="label">Имя</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input is-valid">
+                      <input id="first-name" type="text" value="Сергей">
+                      <label for="first-name" class="label">Имя</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Field</div>
                   </div>
-                  <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
-                    <svg class="icon icon-question ">
-                      <use xlink:href="img/sprite.svg#icon-question"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <div class="input js-input is-valid">
-                    <input id="last-name" type="text" value="Иванов">
-                    <label for="last-name" class="label">Фамилия</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input is-valid">
+                      <input id="last-name" type="text" value="Иванов">
+                      <label for="last-name" class="label">Фамилия</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Field</div>
                   </div>
-                  <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
-                    <svg class="icon icon-question ">
-                      <use xlink:href="img/sprite.svg#icon-question"></use>
-                    </svg>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="password" type="password">
+                      <label for="password" class="label">Пароль *</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
                   </div>
-                </div>
-                <div class="form-control">
-                  <div class="input js-input">
-                    <input id="password" type="password">
-                    <label for="password" class="label">Пароль *</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="password-again" type="text">
+                      <label for="password-again" class="label">Пароль еще раз *</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Field</div>
                   </div>
-                </div>
-                <div class="form-control">
-                  <div class="input js-input">
-                    <input id="password-again" type="text">
-                    <label for="password-again" class="label">Пароль еще раз *</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="phone" type="text">
+                      <label for="phone" class="label">Номер телефона</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Field</div>
                   </div>
-                  <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
-                    <svg class="icon icon-question ">
-                      <use xlink:href="img/sprite.svg#icon-question"></use>
-                    </svg>
-                  </div>
-                </div>
-                <div class="form-control">
-                  <div class="input js-input">
-                    <input id="phone" type="text">
-                    <label for="phone" class="label">Номер телефона</label>
-                    <div class="icon-valid">
-                      <svg class="icon icon-check ">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
+                  <!-- end form-control -->
+                  <div class="form__conditions">
+                    <!-- begin checkbox -->
+                    <label class="checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox__text">Согласен с условиями</span>
+                      <span class="checkbox__checked">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </span>
+                    </label>
+                    <!-- end checkbox -->
+                    <a href="#" class="link" target="_blank">политики конфиденциальности</a>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
                       </svg>
                     </div>
-                    <div class="error-text">Invalid Field</div>
                   </div>
-                  <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
-                    <svg class="icon icon-question ">
-                      <use xlink:href="img/sprite.svg#icon-question"></use>
-                    </svg>
+                  <div class="form__buttons">
+                    <button class="form__submit btn btn_blue" type="submit">Регистрация</button>
                   </div>
-                </div>
-              </form>
+                  <div class="form__footer">
+                    <div class="form__title-sm">Регистрация через</div>
+                    <ul class="form__soc soc">
+                      <li class="soc__item">
+                        <a href="#" class="soc__link">
+                          <svg class="icon icon-vk ">
+                            <use xlink:href="img/sprite.svg#icon-vk"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="soc__item">
+                        <a href="#" class="soc__link">
+                          <svg class="icon icon-fb ">
+                            <use xlink:href="img/sprite.svg#icon-fb"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="soc__item">
+                        <a href="#" class="soc__link">
+                          <svg class="icon icon-googleplus ">
+                            <use xlink:href="img/sprite.svg#icon-googleplus"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="soc__item">
+                        <a href="#" class="soc__link">
+                          <svg class="icon icon-inst ">
+                            <use xlink:href="img/sprite.svg#icon-inst"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="soc__item">
+                        <a href="#" class="soc__link">
+                          <svg class="icon icon-classmates ">
+                            <use xlink:href="img/sprite.svg#icon-classmates"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+              <div class="popup-tabs__container" data-tabs-container="tab-2">
+                <form action="/" class="form">
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="e-mail-entity" type="text">
+                      <label for="e-mail-entity" class="label">E-mail</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Email</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="first-name-entity" type="text">
+                      <label for="first-name-entity" class="label">Имя</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="last-name-entity" type="text">
+                      <label for="last-name-entity" class="label">Фамилия</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="password-entity" type="password">
+                      <label for="password-entity" class="label">Пароль *</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="password-again-entity" type="text">
+                      <label for="password-again-entity" class="label">Пароль еще раз *</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                  <!-- begin form-control -->
+                  <div class="form-control">
+                    <div class="input js-input">
+                      <input id="phone-entity" type="text">
+                      <label for="phone-entity" class="label">Номер телефона</label>
+                      <div class="icon-valid">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/sprite.svg#icon-check"></use>
+                        </svg>
+                      </div>
+                      <div class="error-text">Invalid Field</div>
+                    </div>
+                    <div class="form__question question js-tooltip" title="Вы должны ввести пароль">
+                      <svg class="icon icon-question ">
+                        <use xlink:href="img/sprite.svg#icon-question"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <!-- end form-control -->
+                </form>
+              </div>
             </div>
-            <div class="popup-tabs__content"></div>
           </div>
+          <!-- end popup-tabs -->
         </div>
       </div>
       <!-- end popup -->
