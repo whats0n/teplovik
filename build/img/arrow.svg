@@ -1,1 +1,12 @@
-<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.6 850.14"><defs><style>.cls-1{fill:#4b5e71;stroke:#4b5e71;stroke-miterlimit:10;}</style></defs><title>arrow</title><rect class="cls-1" x="628.16" y="335.62" width="600" height="24.99" transform="translate(-188.48 -680.78) rotate(45)"/><rect class="cls-1" x="628.41" y="742.4" width="600" height="25" transform="translate(-968.35 751.15) rotate(-45)"/></svg>
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.6 850.14">
+    <defs>
+        <style>
+            .cls-1{fill:#4b5e71;stroke:#4b5e71;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <title>
+        arrow
+    </title>
+    <path class="cls-1" transform="rotate(45 727.534 -567.905)" d="M628.16 335.62h600v24.99h-600z"/>
+    <path class="cls-1" transform="rotate(-45 422.543 1544.477)" d="M628.41 742.4h600v25h-600z"/>
+</svg>
