@@ -140,6 +140,18 @@ eval("/* WEBPACK VAR INJECTION */(function($) {\n\nvar control = $('input, texta
 
 /***/ }),
 
+/***/ "./components/counter.js":
+/*!*******************************!*\
+  !*** ./components/counter.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("/* WEBPACK VAR INJECTION */(function($) {\n\nfunction counter() {\n  var number = $('.js-counter');\n  number.each(function () {\n    var _this = $(this);\n    var max_number = +_this.attr('data-max-number');\n    var input = _this.find('.js-counter-input');\n    var plus = _this.find('.js-counter-plus');\n    var minus = _this.find('.js-counter-minus');\n    plus.bind('click', function () {\n      var val = +input.val();\n      if (val >= max_number) {\n        return false;\n      } else {\n        val += 1;\n        input.val(val);\n      }\n    });\n    minus.bind('click', function () {\n      var val = +input.val();\n      if (val > 1) {\n        val -= 1;\n        input.val(val);\n      } else {\n        return false;\n      }\n    });\n  });\n}\ncounter();\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\")))\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2NvdW50ZXIuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL2pzL2NvbXBvbmVudHMvY291bnRlci5qcz9jM2MxIl0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIGNvdW50ZXIoKSB7XG4gIHZhciBudW1iZXIgPSAkKCcuanMtY291bnRlcicpO1xuICBudW1iZXIuZWFjaChmdW5jdGlvbigpIHtcbiAgICB2YXIgX3RoaXMgPSAkKHRoaXMpO1xuICAgIHZhciBtYXhfbnVtYmVyID0gKyhfdGhpcy5hdHRyKCdkYXRhLW1heC1udW1iZXInKSk7XG4gICAgdmFyIGlucHV0ID0gX3RoaXMuZmluZCgnLmpzLWNvdW50ZXItaW5wdXQnKTtcbiAgICB2YXIgcGx1cyA9IF90aGlzLmZpbmQoJy5qcy1jb3VudGVyLXBsdXMnKTtcbiAgICB2YXIgbWludXMgPSBfdGhpcy5maW5kKCcuanMtY291bnRlci1taW51cycpO1xuICAgIHBsdXMuYmluZCgnY2xpY2snLCBmdW5jdGlvbigpIHtcbiAgICAgIHZhciB2YWwgPSArKGlucHV0LnZhbCgpKTtcbiAgICAgIGlmICh2YWwgPj0gbWF4X251bWJlcikge1xuICAgICAgICByZXR1cm4gZmFsc2U7XG4gICAgICB9XG4gICAgICBlbHNlIHtcbiAgICAgICAgdmFsICs9IDE7XG4gICAgICAgIGlucHV0LnZhbCh2YWwpO1xuICAgICAgfVxuICAgIH0pO1xuICAgIG1pbnVzLmJpbmQoJ2NsaWNrJywgZnVuY3Rpb24oKSB7XG4gICAgICB2YXIgdmFsID0gKyhpbnB1dC52YWwoKSk7XG4gICAgICBpZiAodmFsID4gMSkge1xuICAgICAgICB2YWwgLT0gMTtcbiAgICAgICAgaW5wdXQudmFsKHZhbCk7XG4gICAgICB9XG4gICAgICBlbHNlIHtcbiAgICAgICAgcmV0dXJuIGZhbHNlO1xuICAgICAgfVxuICAgIH0pO1xuICB9KTtcbn1cbmNvdW50ZXIoKTtcbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/counter.js\n");
+
+/***/ }),
+
 /***/ "./components/index.js":
 /*!*****************************!*\
   !*** ./components/index.js ***!
@@ -148,7 +160,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {\n\nvar control = $('input, texta
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./tabs */ \"./components/tabs.js\");\n\n__webpack_require__(/*! ./initTooltip */ \"./components/initTooltip.js\");\n\n__webpack_require__(/*! ./checkInputValue */ \"./components/checkInputValue.js\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luZGV4LmpzPzdjYmQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL3RhYnMnO1xuXG5pbXBvcnQgJy4vaW5pdFRvb2x0aXAnO1xuaW1wb3J0ICcuL2NoZWNrSW5wdXRWYWx1ZSc7Il0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/index.js\n");
+eval("\n\n__webpack_require__(/*! ./tabs */ \"./components/tabs.js\");\n\n__webpack_require__(/*! ./initTooltip */ \"./components/initTooltip.js\");\n\n__webpack_require__(/*! ./counter */ \"./components/counter.js\");\n\n__webpack_require__(/*! ./checkInputValue */ \"./components/checkInputValue.js\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luZGV4LmpzPzdjYmQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL3RhYnMnO1xuaW1wb3J0ICcuL2luaXRUb29sdGlwJztcbmltcG9ydCAnLi9jb3VudGVyJztcbmltcG9ydCAnLi9jaGVja0lucHV0VmFsdWUnO1xuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUE7QUFDQTtBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/index.js\n");
 
 /***/ }),
 
