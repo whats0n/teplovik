@@ -11,13 +11,12 @@ title: order1
 			<div class="order__steps">
 				<ul class="order__steps-inner inner">
 					<li class="order__step is-active">1. Корзина заказов</li>
-					<li class="order__arrow">{{mixins.icon('arrow')}}</li>
 					<li class="order__step">2. Оформление заказа</li>
 				</ul>
 			</div>
-			<div class="order__inner inner product">
-				<table class="product__table">
-					<tr class="product__title">
+			<div class="order__inner inner">
+				<table class="table">
+					<tr>
 						<th>Фото</th>
 						<th>Наименование</th>
 						<th>Цена</th>
@@ -25,15 +24,17 @@ title: order1
 						<th>Стоимость</th>
 						<th></th>
 					</tr>
-					<tr class="product__row">
-						<td class="product__images" data-th="Фото"><img src="img/product1.png" alt="product"></td>
+					<tr>
+						<td data-th="Фото">
+							<img src="img/product1.png" alt="product">
+						</td>
 						<td data-th="Наименование">
-							<div class="produc__name">Угольник для радиаторов 1/2</div>
-							<div class="product__article">Артикул:B1HCD43</div>
+							<div>Угольник для радиаторов 1/2</div>
+							<div class="vendor-code">Артикул:B1HCD43</div>
 						</td>
 						<td data-th="Цена">6 599 руб</td>
 						<td data-th="Кол-во">
-							<div class="product__counter counter js-counter">
+							<div class="counter js-counter">
 								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
 								<input class="counter__input js-counter-input" type="text" value="1">	
 								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
@@ -41,18 +42,18 @@ title: order1
 						</td>
 						<td data-th="Стоимость">6 599 руб</td>
 						<td>
-							<button class="product__del-btn js-del-product-item">{{mixins.icon('close')}}</button>
+							<button class="del-btn">{{mixins.icon('close')}}</button>
 						</td>
 					</tr>
-					<tr class="product__row">
-						<td class="product__images" data-th="Фото"><img src="img/product2.png" alt="product"></td>
+					<tr>
+						<td data-th="Фото"><img src="img/product2.png" alt="product"></td>
 						<td data-th="Наименование">
-							<div class="produc__name">Угольник для радиаторов 1/2</div>
-							<div class="product__article">Артикул:B1HCD43</div>
+							<div>Угольник для радиаторов 1/2</div>
+							<div class="vendor-code">Артикул:B1HCD43</div>
 						</td>
 						<td data-th="Цена">6 599 руб</td>
 						<td data-th="Кол-во">
-							<div class="product__counter counter js-counter">
+							<div class="counter counter js-counter">
 								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
 								<input class="counter__input js-counter-input" type="text" value="1">	
 								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
@@ -60,18 +61,18 @@ title: order1
 						</td>
 						<td data-th="Стоимость">6 599 руб</td>
 						<td>
-							<button class="product__del-btn js-del-product-item">{{mixins.icon('close')}}</button>
+							<button class="del-btn">{{mixins.icon('close')}}</button>
 						</td>
 					</tr>
-					<tr class="product__row">
-						<td class="product__images" data-th="Фото"><img src="img/product3.png" alt="product"></td>
+					<tr>
+						<td data-th="Фото"><img src="img/product3.png" alt="product"></td>
 						<td data-th="Наименование">
-							<div class="produc__name">Угольник для радиаторов 1/2</div>
-							<div class="product__article">Артикул:B1HCD43</div>
+							<div>Угольник для радиаторов 1/2</div>
+							<div class="vendor-code">Артикул:B1HCD43</div>
 						</td>
 						<td data-th="Цена">6 599 руб</td>
 						<td data-th="Кол-во">
-							<div class="product__counter counter js-counter">
+							<div class="counter counter js-counter">
 								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
 								<input class="counter__input js-counter-input" type="text" value="1">	
 								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
@@ -79,18 +80,18 @@ title: order1
 						</td>
 						<td data-th="Стоимость">6 599 руб</td>
 						<td>
-							<button class="product__del-btn js-del-product-item">{{mixins.icon('close')}}</button>
+							<button class="del-btn">{{mixins.icon('close')}}</button>
 						</td>
 					</tr>
-				  	<tr class="product__row">
-						<td class="product__images" data-th="Фото"><img src="img/product4.png" alt="product"></td>
+				  	<tr>
+						<td data-th="Фото"><img src="img/product4.png" alt="product"></td>
 						<td data-th="Наименование">
-							<div class="produc__name">Угольник для радиаторов 1/2</div>
-							<div class="product__article">Артикул:B1HCD43</div>
+							<div>Угольник для радиаторов 1/2</div>
+							<div class="vendor-code">Артикул:B1HCD43</div>
 						</td>
 						<td data-th="Цена">6 599 руб</td>
 						<td data-th="Кол-во">
-							<div class="product__counter counter js-counter">
+							<div class="counter counter js-counter">
 								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
 								<input class="counter__input js-counter-input" type="text" value="1">	
 								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
@@ -98,7 +99,7 @@ title: order1
 						</td>
 						<td data-th="Стоимость">6 599 руб</td>
 						<td>
-							<button class="product__del-btn js-del-product-item">{{mixins.icon('close')}}</button>
+							<button class="del-btn">{{mixins.icon('close')}}</button>
 						</td>
 					</tr>
 				</table>

@@ -1,0 +1,88 @@
+.form-control
+	position: relative
+	&:not(:first-child)
+		margin-top: 9px
+.input
+	position: relative
+	&:before
+		position: absolute
+		content: "" 
+		top: 0
+		left: 0
+		height: 45px
+		border-radius: 4px 0 0 4px
+		width: 4px
+		background-color: $red 
+		display: none
+	&.is-error
+		&:before
+			display: block
+	input
+		padding: 19px 25px 4px 14px
+		width: 100%
+		color: #0f2841
+		font-family: $familyOpensans
+		font-size: 14px
+		font-weight: 400
+		border: 1px solid $inputBorder
+		border-radius: 4px 
+		height: 45px
+		display: block
+		&:focus 
+			& ~ .label
+				font-size: 11px
+				transform: translateY(-7px)
+.label
+	position: absolute
+	top: 10px
+	left: 15px
+	opacity: 0.5
+	color: $dark
+	transition: font-size .3s, transform .3s
+	font-family: $familyOpensans
+	font-size: 14px
+	.is-filled &
+		font-size: 11px
+		transform: translateY(-7px)
+.icon-valid
+	position: absolute
+	top: 15px
+	right: 10px
+	line-height: 1
+	font-size: 0
+	color: $green 
+	display: none
+	.is-valid &
+		display: block
+	.icon
+		font-size: 11px
+.error-text
+	padding-left: 14px
+	color: $red
+	font-size: 13px
+	font-weight: 400
+	text-align: left
+	display: none
+	.is-error &
+		display: block
+.question
+	position: relative
+	width: 19px
+	height: 19px
+	vertical-align: top
+	font-size: 0
+	border-radius: 50%
+	cursor: pointer
+	color: #757575 
+	transition: background-color .3s
+	display: inline-block
+	+hover
+		background-color: #F4F3F1 
+	.icon-question
+		font-size: 19px
+
+.form
+	&__question
+		position: absolute
+		top: 11px
+		right: -25px

@@ -128,6 +128,18 @@ eval("\n\nvar _constants = __webpack_require__(/*! ./constants */ \"./constants.
 
 /***/ }),
 
+/***/ "./components/checkInputValue.js":
+/*!***************************************!*\
+  !*** ./components/checkInputValue.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("/* WEBPACK VAR INJECTION */(function($) {\n\nvar control = $('input, textarea');\n\nvar checkInputValue = function checkInputValue(that) {\n  var value = that.val();\n  var parent = that.parent('.js-input');\n  var filled = 'is-filled';\n  if (value) {\n    parent.addClass(filled);\n  } else {\n    parent.removeClass(filled);\n  }\n};\ncontrol.each(function () {\n  var that = $(this);\n  checkInputValue(that);\n}).on('keyup', function () {\n  var that = $(this);\n  checkInputValue(that);\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\")))\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2NoZWNrSW5wdXRWYWx1ZS5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9zcmMvanMvY29tcG9uZW50cy9jaGVja0lucHV0VmFsdWUuanM/YWFlZCJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBjb250cm9sID0gJCgnaW5wdXQsIHRleHRhcmVhJyk7XHJcblxyXG5jb25zdCBjaGVja0lucHV0VmFsdWUgPSAodGhhdCkgPT4ge1xyXG4gIGNvbnN0IHZhbHVlID0gdGhhdC52YWwoKTtcclxuICBjb25zdCBwYXJlbnQgPSB0aGF0LnBhcmVudCgnLmpzLWlucHV0Jyk7XHJcbiAgY29uc3QgZmlsbGVkID0gJ2lzLWZpbGxlZCc7XHJcbiAgaWYgKHZhbHVlKSB7XHJcbiAgICBwYXJlbnQuYWRkQ2xhc3MoZmlsbGVkKTtcclxuICB9IGVsc2Uge1xyXG4gICAgcGFyZW50LnJlbW92ZUNsYXNzKGZpbGxlZCk7XHJcbiAgfVxyXG59O1xyXG5jb250cm9sXHJcbiAgLmVhY2goZnVuY3Rpb24oKSB7XHJcbiAgICBjb25zdCB0aGF0ID0gJCh0aGlzKTtcclxuICAgIGNoZWNrSW5wdXRWYWx1ZSh0aGF0KTtcclxuICB9KVxyXG4gIC5vbigna2V5dXAnLCBmdW5jdGlvbigpIHtcclxuICAgIGNvbnN0IHRoYXQgPSAkKHRoaXMpO1xyXG4gICAgY2hlY2tJbnB1dFZhbHVlKHRoYXQpO1xyXG4gIH0pO1xyXG4iXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7QSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/checkInputValue.js\n");
+
+/***/ }),
+
 /***/ "./components/counter.js":
 /*!*******************************!*\
   !*** ./components/counter.js ***!
@@ -148,7 +160,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {\n\nfunction counter() {\n  var n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\n__webpack_require__(/*! ./initTooltip */ \"./components/initTooltip.js\");\n\n__webpack_require__(/*! ./counter */ \"./components/counter.js\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luZGV4LmpzPzdjYmQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL2luaXRUb29sdGlwJztcclxuaW1wb3J0ICcuL2NvdW50ZXInO1xyXG4iXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTtBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/index.js\n");
+eval("\n\n__webpack_require__(/*! ./initTooltip */ \"./components/initTooltip.js\");\n\n__webpack_require__(/*! ./counter */ \"./components/counter.js\");\n\n__webpack_require__(/*! ./checkInputValue */ \"./components/checkInputValue.js\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luZGV4LmpzPzdjYmQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICcuL2luaXRUb29sdGlwJztcclxuaW1wb3J0ICcuL2NvdW50ZXInO1xyXG5pbXBvcnQgJy4vY2hlY2tJbnB1dFZhbHVlJztcclxuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7QUFBQTtBQUNBO0FBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/index.js\n");
 
 /***/ }),
 
@@ -160,7 +172,7 @@ eval("\n\n__webpack_require__(/*! ./initTooltip */ \"./components/initTooltip.js
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function($) {\n\nvar _tooltipster = __webpack_require__(/*! tooltipster */ \"../../node_modules/tooltipster/dist/js/tooltipster.bundle.min.js\");\n\nvar _tooltipster2 = _interopRequireDefault(_tooltipster);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar container = $('.js-tooltip');\n\ncontainer.tooltipster({\n  animation: 'fade',\n  delay: 200\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\")))\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaXRUb29sdGlwLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luaXRUb29sdGlwLmpzPzE2M2YiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHRvb2x0aXBzdGVyIGZyb20gJ3Rvb2x0aXBzdGVyJztcclxuY29uc3QgY29udGFpbmVyID0gJCgnLmpzLXRvb2x0aXAnKTtcclxuXHJcbmNvbnRhaW5lci50b29sdGlwc3Rlcih7XHJcbiAgYW5pbWF0aW9uOiAnZmFkZScsXHJcbiAgZGVsYXk6IDIwMFxyXG59KTtcclxuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUZBO0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/initTooltip.js\n");
+eval("/* WEBPACK VAR INJECTION */(function($) {\n\nvar _tooltipster = __webpack_require__(/*! tooltipster */ \"../../node_modules/tooltipster/dist/js/tooltipster.bundle.min.js\");\n\nvar _tooltipster2 = _interopRequireDefault(_tooltipster);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar container = $('.js-tooltip');\n\ncontainer.tooltipster({\n  animation: 'fade',\n  delay: 0,\n  side: 'right'\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"../../node_modules/jquery/dist/jquery.js\")))\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL2luaXRUb29sdGlwLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9qcy9jb21wb25lbnRzL2luaXRUb29sdGlwLmpzPzE2M2YiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHRvb2x0aXBzdGVyIGZyb20gJ3Rvb2x0aXBzdGVyJztcclxuY29uc3QgY29udGFpbmVyID0gJCgnLmpzLXRvb2x0aXAnKTtcclxuXHJcbmNvbnRhaW5lci50b29sdGlwc3Rlcih7XHJcbiAgYW5pbWF0aW9uOiAnZmFkZScsXHJcbiAgZGVsYXk6IDAsXHJcbiAgc2lkZTogJ3JpZ2h0J1xyXG59KTtcclxuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0E7Ozs7O0FBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBSEE7QSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/initTooltip.js\n");
 
 /***/ }),
 
