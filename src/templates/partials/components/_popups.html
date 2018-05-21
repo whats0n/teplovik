@@ -10,17 +10,57 @@
 			<div class="popup-tabs__content" style="display: block;">
 				<form action="/" class="form">
 					<div class="form-control">
-						<div class="input">
-							<input id="e-mail" type="text">
+						<div class="input js-input is-error">
+							<input id="e-mail" type="text" value="ivanko@gmailer.com">
 							<label for="e-mail" class="label">E-mail</label>
-							<div class="icon-valid">
-								{{ mixins.icon('') }}
-							</div>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
 							<div class="error-text">Invalid Email</div>
 						</div>
-						<div class="tooltip">
-							<div class="tooltip__icon js-tooltip" title="This is my image's tooltip message!">{{ mixins.icon('question') }}</div>
+						<div class="form__question question js-tooltip" title="Вы должны ввести пароль">{{ mixins.icon('question') }}</div>
+					</div>
+					<div class="form-control">
+						<div class="input js-input is-valid">
+							<input id="first-name" type="text" value="Сергей">
+							<label for="first-name" class="label">Имя</label>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
+							<div class="error-text">Invalid Field</div>
 						</div>
+						<div class="form__question question js-tooltip" title="Вы должны ввести пароль">{{ mixins.icon('question') }}</div>
+					</div>
+					<div class="form-control">
+						<div class="input js-input is-valid">
+							<input id="last-name" type="text" value="Иванов">
+							<label for="last-name" class="label">Фамилия</label>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
+							<div class="error-text">Invalid Field</div>
+						</div>
+						<div class="form__question question js-tooltip" title="Вы должны ввести пароль">{{ mixins.icon('question') }}</div>
+					</div>
+					<div class="form-control">
+						<div class="input js-input">
+							<input id="password" type="password">
+							<label for="password" class="label">Пароль *</label>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
+							<div class="error-text">Invalid Field</div>
+						</div>
+					</div>
+					<div class="form-control">
+						<div class="input js-input">
+							<input id="password-again" type="text">
+							<label for="password-again" class="label">Пароль еще раз *</label>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
+							<div class="error-text">Invalid Field</div>
+						</div>
+						<div class="form__question question js-tooltip" title="Вы должны ввести пароль">{{ mixins.icon('question') }}</div>
+					</div>
+					<div class="form-control">
+						<div class="input js-input">
+							<input id="phone" type="text">
+							<label for="phone" class="label">Номер телефона</label>
+							<div class="icon-valid">{{ mixins.icon('check') }}</div>
+							<div class="error-text">Invalid Field</div>
+						</div>
+						<div class="form__question question js-tooltip" title="Вы должны ввести пароль">{{ mixins.icon('question') }}</div>
 					</div>
 				</form>
 			</div>

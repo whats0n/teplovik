@@ -3,5 +3,6 @@ const container = $('.js-tooltip');
 
 container.tooltipster({
   animation: 'fade',
-  delay: 200
+  delay: 0,
+  side: 'right'
 });
