@@ -1,7 +1,136 @@
 .content
 	padding: 65px 0 90px
-	h1,h2,h3,h4
-		padding-bottom: 30px
+	&__row
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		&:not(:first-child)
+			margin-top: 34px
+		&:not(:last-child)
+			margin-bottom: 65px	
+	&__col
+		width: 49%
+		text-align: center
+	h1,h2,h4
+		&:not(:last-child)
+			margin-bottom: 40px
+	h2
+		&:first-child
+			margin-top: 60px	
+	center
+		padding: 0 80px
+		text-align: left
+		p
+			&:last-child
+				color: $dark
+	label
+		display: block
+		color: $gray
+		width: 100%
+		line-height: 1.4
 	p
 		font-size: 15px
-		padding-bottom: 50px	
+		&:not(:last-child)
+			margin-bottom: 35px
+	span
+		color: $gray		
+	img
+		width: 100%
+		& + label
+			text-align: center
+		&:not(:first-child)
+			margin-top: 70px
+		&:not(:last-child)
+			margin-bottom: 15px
+	ul
+		text-align: left
+		padding: 30px 15px 0 80px
+		li	
+			position: relative
+			padding-left: 10px
+			&:before
+				position: absolute
+				content: ''
+				top: 50%
+				left: 0
+				width: 4px
+				height: 4px
+				margin-top: -2px
+				border-radius: 50%
+				background-color: $gray	
+	ol
+		list-style-type: decimal
+		text-align: left
+		padding: 30px 15px 0 0	
+	a
+		color: $blue
+		text-decoration: none
+		border-bottom: 1px solid $blue
+		transition: border-color .3s
+	a:hover
+		border-color: transparent
+	blockquote
+		position: relative
+		margin: 50px 0
+		background-color: #efefef
+		font-size: 18px
+		color: $dark
+		font-style: italic
+		font-weight: 600
+		text-align: center
+		padding: 70px 0
+		&:before
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			content: ''
+			width: 400px
+			height: 80px
+			border-top: 1px solid $gray	
+			border-bottom: 1px solid $gray
+			opacity: .5
+			z-index: 1
+		&:after
+			position: absolute
+			top: 29%
+			left: 50%
+			transform: translate(-50%, -50%)
+			content: '"'
+			width: 30px
+			height: 30px
+			border-radius: 50%
+			color: $gray
+			font-size: 20px
+			background-color: #efefef
+			z-index: 2
+		i
+			z-index: 2
+	table
+		margin-top: 40px
+		margin-bottom: 30px		
+	tr
+		color: $dark
+		border-bottom: 1px solid $inputBorder	
+	th
+		text-transform: uppercase
+		font-weight: 400
+		text-align: left
+		color: $gray
+		padding-bottom: 10px
+	tr 
+		td:first-child
+			width: 300px
+			padding: 15px 15px 15px 0
+	tr 
+		td:nth-child(2)		
+			width: 300px
+			padding: 15px 15px 15px 0
+	tr 
+		td:nth-child(3)		
+			width: 200px
+			padding: 15px 15px 15px 0
+	tr 
+		td:nth-child(4)		
+			width: 180px
+			padding: 15px 15px 15px 0
