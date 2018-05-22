@@ -3,3 +3,5 @@ ProjectTitle: teplovik
 PageList:
 - file: home.html
 - file: forms.html
+- file: order1.html
+- file: text.html

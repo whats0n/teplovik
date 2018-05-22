@@ -1,0 +1,68 @@
+.main-catalog
+	padding-top: 3px
+	&__categories
+		clear: both
+		margin: 0 -10px
+		font-size: 0
+		+supports(column-count, 4)
+			column-count: 4
+		// +md 
+		// 	+supports(column-count, 3)
+		// 		column-count: 3
+		// +sm 
+		// 	+supports(column-count, 2)
+		// 		column-count: 2
+		// +xs 
+		// 	+supports(column-count, 1)
+		// 		column-count: 1
+	&__category
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 27px 10px
+		width: 25%
+		+f(16px, 400, 22px)
+		+supports(column-count, 4)
+			display: list-item
+			width: auto
+			break-inside: avoid-column
+		// +md 
+		// 	width: 33.33%
+		// 	+supports(column-count, 3)
+		// 		width: auto
+		// +sm 
+		// 	width: 50%
+		// 	+supports(column-count, 2)
+		// 		width: auto
+		// +xs 
+		// 	width: 100%
+		// 	+supports(column-count, 1)
+		// 		width: auto
+	&__category-in
+		position: relative
+		padding-left: 70px
+	&__figure
+		position: absolute
+		top: 0
+		left: 0
+		width: 60px
+		font-size: 0
+		text-align: center
+	&__title
+		display: block
+		margin-bottom: 12px
+		color: inherit
+		+f(16px, 700, 1.3125)
+		transition: color 0.3s
+		+hover
+			color: $blue
+	&__item
+		padding: 5px 0
+	&__link
+		display: block
+		color: inherit
+		+f(13px, null, 1.6)
+		letter-spacing: 0.01em
+		transition: color 0.3s
+		+hover
+			color: $blue

@@ -47,7 +47,13 @@
 
 					<div class="card__total">
 						<div class="card__price"><span>322</span> руб.</div>
-						<div class="card__qua"><input type="number"></div>
+						<div class="card__qua">
+							<div class="counter card__counter js-counter">
+								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
+								<input class="counter__input js-counter-input" type="text" value="1">
+								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
+							</div>
+						</div>
 						<div class="card__availability">
 							<span>Наличие:</span>
 							Много

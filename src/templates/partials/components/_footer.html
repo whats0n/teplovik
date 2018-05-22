@@ -1,0 +1,72 @@
+<!-- begin footer -->
+<footer class="footer">
+	<div class="inner footer__inner">
+		<button class="go-top">
+			{{mixins.icon('angle-up', 'go-top__icon')}}
+		</button>
+		<div class="footer__nav">
+			{% for item in [
+				{
+					title: 'Магазин',
+					list: [ 'Каталог', 'Акции', 'Бренды', 'Личный кабинет' ]
+				},
+				{
+					title: 'Информация',
+					list: [ 'Доставка', 'Оплата', 'О компании', 'Контакты' ]
+				}
+			] %}
+				<div class="footer__col">
+					<a href="#" class="footer__subtitle">{{item.title}}</a>
+					<ul class="footer__list">
+						{% for item in item.list %}
+							<li class="footer__item">
+								<a href="#" class="footer__link">{{item}}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="footer__info">
+			<div class="footer__row">
+				<a href="tel:+74994504182" class="footer__phone">+7 (499) 450-41-82</a>
+				<div class="footer__meta">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
+			</div>
+			<div class="footer__row">
+				<a href="mailto:sale@teplovik.shop" class="footer__mail"><strong>sale@teplovik.shop</strong></a>
+				<div class="footer__meta">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
+			</div>
+		</div>
+		<div class="footer__media">
+			<div class="footer__subtitle">Присоединяйтесь</div>
+			<ul class="social footer__social">
+				{% for item in [ 'instagram', 'vk', 'facebook' ] %}
+					<li class="social__item">
+						<a href="#" class="social__link">
+							{{mixins.icon(item, 'social__icon social__' + item)}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<a href="#" class="footer__market">
+				<img src="img/yandex.png" alt="yandex market">
+			</a>
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__copy">© 2017-2018 Teplovik</div>
+			<div class="footer__rules">
+				<a href="#" class="footer__rules-link">Политика конфиденциальности</a>
+			</div>
+			<ul class="footer__payments">
+				{% for item in [ 'visa', 'master', 'yandex-money', 'rbk' ] %}
+					<li class="footer__payment">
+						<a href="#" class="footer__payment-link">
+							<img src="img/{{item}}.png" alt="{{item}}">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->

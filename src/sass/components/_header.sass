@@ -21,15 +21,16 @@
 		vertical-align: top
 		padding: 10px 16px
 		height: 40px
+		color: inherit
 		+vertical 
+		transition: color 0.3s
+		+hover
+			color: $orange
 	&__icon 
 		display: inline-block
 		vertical-align: middle
 		font-size: 20px
-	&__like
-		font-size: 17px
-	&__cart 
-		font-size: 19px
+		fill: currentColor
 	&__sticker
 		position: absolute
 		top: -3px
@@ -46,11 +47,16 @@
 		display: block
 		color: inherit
 		+f(22px, 700, 19px)
+		letter-spacing: 0.01em
 		text-transform: uppercase
+		transition: color 0.3s
+		+hover
+			color: $blue
 	&__schedule
 		margin-top: 9px
 		opacity: 0.5
 		+f(12px, 400, 1)
+		letter-spacing: 0.01em
 
 
 .logo
@@ -69,21 +75,7 @@
 		padding: 10px 15px 11px
 		color: currentColor
 		+f(14px, 400, 1)
+		letter-spacing: 0.01em
+		transition: color 0.3s
 		+hover
-			span 
-				&:before
-					opacity: 1
-					transform: translate3d(0,0,0)
-		span 
-			position: relative
-			display: block
-			&:before
-				content: ''
-				position: absolute
-				left: 0
-				right: 0
-				bottom: -4px
-				border-bottom: 1px solid currentColor
-				opacity: 0
-				transform: translate3d(0,10px,0)
-				transition: opacity 0.3s, transform 0.3s
+			color: $blue
