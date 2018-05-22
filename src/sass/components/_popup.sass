@@ -5,9 +5,12 @@
 	z-index: 100
 	width: 100%
 	height: 100%
-	background-color: rgba(0,0,0,0.8)
+	overflow: auto
+	background-color: rgba(#000, .5)
 	+vertical
 	&__inner
+		position: relative
+		margin: 35px
 		padding: 34px 34px 29px 34px
 		width: 100%
 		max-width: 611px
@@ -15,8 +18,54 @@
 		vertical-align: middle
 		display: inline-block
 		background-color: $white 
+	&__reestablish
+		padding: 64px 0
+	&__close
+		position: absolute
+		top: 0
+		right: -29px
+		font-size: 0
+		background-color: transparent
+		transition: color .3s
+		color: rgba($white, .5) 
+		&:hover
+			color: $white 
+		.icon
+			font-size: 17px
 	&__title
 		margin-bottom: 15px
-		font-family: $familyMontserrat 
+		font-family: $montserrat 
 		+f(21px,500,1.4)
 		text-align: center
+	&__description
+		margin-bottom: 10px
+		color: rgba(#0f2841, 0.5)
+		font-family: $opensans
+		font-size: 14px
+		font-weight: 400
+
+.popup-tabs
+	&__list
+		padding: 0 34px
+		margin: 0 -34px
+		font-size: 0
+		text-align: center
+		border-bottom: 1px solid $borderGray
+	&__item
+		position: relative
+		z-index: 1
+		margin-bottom: -1px
+		padding: 4px 38px 8px
+		color: rgba($dark, 0.7)
+		font-family: $opensans
+		+f(14px,400,1.4)
+		user-select: none
+		vertical-align: top
+		border-bottom: 3px solid transparent
+		transition: border-color .3s, color .3s
+		display: inline-block
+		+hover
+			color: $dark
+		&.is-active
+			color: $dark
+			border-color: $blue 
