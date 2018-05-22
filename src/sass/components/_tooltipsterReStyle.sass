@@ -50,5 +50,20 @@
 		.tooltipster-arrow-border
 			z-index: 1
 			+arr(8,8,$white,tl)
+	&.tooltipster-top 
+		padding-top: 0
+		width: 170px
+		text-align: center
+		.tooltipster-box
+			margin: 0
+			box-shadow: 0 0 18px rgba(0, 0, 1, 0.16)
+			&:before
+				display: none
+		.tooltipster-arrow-border
+			display: none
+		.tooltipster-content
+			padding: 10px
+			+f(11px, 400, 1.4)
+			letter-spacing: -0.01em
 .tooltipster-base
 	width: 130px

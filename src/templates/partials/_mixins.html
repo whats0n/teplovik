@@ -11,3 +11,15 @@
 	{% endfor %}
 </ul>
 {% endmacro %}
+
+{% macro checkbox(props) %}
+<!-- begin checkbox -->
+<label class="checkbox {{props.classList}}">
+	<input type="checkbox" {{props.inputAttrs | safe}}>
+	{% if props.text %}
+		<span class="checkbox__text">{{props.text}}</span>
+	{% endif %}
+	<span class="checkbox__checked">{{icon('check')}}</span>
+</label>
+<!-- end checkbox -->
+{% endmacro %}

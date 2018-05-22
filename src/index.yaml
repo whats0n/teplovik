@@ -6,3 +6,4 @@ PageList:
 - file: forms.html
 - file: order1.html
 - file: text.html
+- file: catalog.html
