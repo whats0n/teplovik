@@ -1,6 +1,10 @@
 .banner
 	display: block
 	color: $white
+	+hover
+		.banner__link
+			&:before
+				opacity: 0
 	&_blue
 		background-image: linear-gradient(29deg, #0caafe 0%, #2df0f2 100%)
 	&_green
@@ -18,12 +22,14 @@
 		padding: 21px 30px 
 	&__title
 		+f(18px, 700, 30px)
+		letter-spacing: -0.025em
 		+text-overflow
 	&__link
 		position: relative
 		display: inline-block
 		vertical-align: top
 		+f(14px, 400, 30px)
+		letter-spacing: 0.01em
 		+text-overflow
 		&:before
 			content: ''
@@ -32,6 +38,7 @@
 			right: 0
 			bottom: 5px
 			border-bottom: 1px solid rgba($white, 0.5)
+			transition: opacity 0.3s
 	&__baxi
 		position: absolute
 		top: 45px
