@@ -1,0 +1,29 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<div class="catalog">
+		<div class="heading">
+			<div class="inner">
+				{{mixins.bc({
+					list: [ 'Главная', 'Каталог', 'Котельное оборудование' ]
+				})}}
+				<h2 class="title-lg heading__title">Котельное оборудование</h2>
+			</div>
+		</div>
+		<div class="catalog__main">
+			<div class="inner catalog__inner">
+				<div class="catalog__sidebar">
+					{% include 'partials/components/_sidebar.html' %}
+				</div>
+				<div class="catalog__content">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

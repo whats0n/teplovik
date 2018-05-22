@@ -1,0 +1,48 @@
+.sidebar
+	&__checkbox
+		padding: 2px 0
+	&__checkboxes
+		padding-bottom: 26px
+		&_in 
+			display: none
+			padding: 0
+	&__list
+		padding-top: 20px
+	&__question
+		position: absolute
+		top: 9px
+		right: 0
+		width: 1em
+		height: 1em
+		background: #e5e5e5
+		font-size: 17px
+		.icon 
+			display: block
+			font-size: 1em
+	&__link
+		position: relative
+		display: block
+		padding-right: 12px
+		color: inherit
+		transition: color 0.3s
+		+hover
+			color: $orange
+			.sidebar__link-icon
+				fill: $orange
+		&.is-active
+			color: $orange
+			.sidebar__link-icon
+				fill: $orange
+	&__link-title
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 6px 20px 6px 0
+		+f(14px, 400, 24px)
+	&__link-icon
+		position: absolute
+		top: 15px
+		right: 0
+		fill: #797979
+		font-size: 5px
+		transition: fill 0.3s
