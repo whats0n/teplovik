@@ -67,7 +67,18 @@
 							</div>
 						</div>
 					</div>
-					<div class="card__controls"></div>
+					<div class="card__controls">
+						<button class="btn btn_blue card__controls-btn card__control">В корзину</button>
+						<button class="btn card__controls-btn card__control">Купить в 1 клик</button>
+						<button class="card__action card__control card__control_indent">
+							{{mixins.icon('like', 'card__controls-icon')}}
+							<span>В избранное</span>
+						</button>
+						<button class="card__action card__control">
+							{{mixins.icon('business', 'card__controls-icon')}}
+							<span>Сравнить</span>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,4 +1,5 @@
 .card
+	margin-bottom: 50px
 	&__row
 		margin: 0 -15px
 		+clr
@@ -41,16 +42,18 @@
 	&__availability
 		display: inline-block
 		vertical-align: top
-		margin-bottom: 20px
+		margin-bottom: 25px
 	&__price
 		letter-spacing: .025em
 		color: #202020
-		margin-right: 70px
+		margin-right: 20px
+		min-width: 175px
 		+f(30px, 500, 1.2)
 		span
 			+f(null, 700, null)
 	&__qua
 		width: 80px
+		margin-right: 20px
 	&__counter
 		padding: 5px
 		.counter__input
@@ -76,6 +79,33 @@
 			background-color: #cfcfcf
 			&.is-active
 				background-color: $orange
+	&__controls
+		font-size: 0
+		margin: 0 -8px -15px
+		&-btn
+			min-width: 130px
+			padding: 10px 10px 11px
+		&-icon
+			font-size: 19px
+			vertical-align: middle
+			margin-right: 10px
+	&__control
+		margin: 0 8px 15px
+		&_indent
+			margin-right: 20px
+	&__action
+		background: transparent
+		font-size: 0
+		padding: 8px 0
+		+hover
+			span
+				color: $lightBlue
+		span
+			display: inline-block
+			vertical-align: middle
+			transition: color .24s
+			color: $blue
+			+f(14px, null, 1)
 .case
 	&__logo
 		position: absolute

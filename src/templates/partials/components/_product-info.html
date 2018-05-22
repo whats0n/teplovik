@@ -1,0 +1,76 @@
+<!-- begin product-info -->
+<div class="product-info">
+	<div class="inner">
+		<div class="grid">
+			<div class="grid__row">
+				<div class="grid__col grid__col_50">
+					<div class="product-info__description">
+						<div class="title-md product-info__title">Описание</div>
+						<p>К современным системам отопления обычно подходят алюминиевые или сталеалюминевые (по-другому – биметаллические) батареи. <br /> Они легки, красивы и очень удобны в обращении. С помощью простого устройства – стального радиаторного ниппеля отдельные секции собираются в радиатор необходимой тепловой мощности. Иногда к нему подсоединяют ручные регуляторы, позволяющие выбрать степень нагрева.</p>
+					</div>
+					<div class="title-md product-info__title">Характеристики</div>
+					{% set characteristics = {
+						classList: 'card__characteristics',
+						items: [
+							{label: 'Мощность', value: '9,45 кВт'},
+							{label: 'Ступени', value: '1 или 3 ступени мощности'},
+							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
+							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
+							{label: 'Пульт управления', value: 'Выносной'},
+							{label: 'КПД', value: '99%'},
+							{label: 'Мощность', value: '9,45 кВт'},
+							{label: 'Ступени', value: '1 или 3 ступени мощности'},
+							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
+							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
+							{label: 'Пульт управления', value: 'Выносной'},
+							{label: 'КПД', value: '99%'}
+						]
+					} %}
+					{% include 'partials/components/_characteristics.html' %}
+				</div>
+				<div class="grid__col grid__col_50">
+					<div class="product-info__doc">
+						<div class="title-md product-info__title">Документы</div>
+						<ul class="doc-list">
+							{% for item in [
+								{
+									img: 'doc',
+									label: 'Каталог продукции Эван',
+									value: '(5.29 Mb)'
+								},
+								{
+									img: 'doc',
+									label: 'Сертификат соответствия на котел электрический <br /> №TC RU C-RU.МН32.В.00110',
+									value: '(2.3 Mb)'
+								},
+								{
+									img: 'doc',
+									label: 'Сертификат соответствия',
+									value: '(1 Mb)'
+								},
+								{
+									img: 'doc',
+									label: 'Котел электрический <br /> №TC RU C-RU.МН32.В.00110',
+									value: '(5.29 Mb)'
+								}
+							] %}
+								<li class="doc-list__item">
+									<a href="#" class="doc-list__wrapper">
+										<div class="doc-list__img">
+											<img src="img/{{item.img}}.jpg" alt="doc" class="doc-list__img-in">
+										</div>
+										<div class="doc-list__content">
+											<div class="doc-list__label">{{item.label | safe}}</div>
+											<div class="doc-list__value">{{item.value}}</div>
+										</div>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end product-info -->
