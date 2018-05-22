@@ -1,0 +1,142 @@
+.order
+	font-family: $opensans
+	&__steps
+		width: 100%
+		border-bottom: 1px solid $inputBorder
+		padding-bottom: 15px
+	&__steps-inner
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		color: $gray-blue
+		font-weight: 600
+		font-size: 16px
+	&__step	
+		position: relative
+		padding-left: 70px
+		&:first-child
+			&::before
+				padding-left: 0
+				display: none
+		&::before
+			position: absolute
+			top: 65%
+			left: 35px
+			content: url(../img/arrow.svg)
+			width: 10px
+			transform: translate(-50%, -50%)
+	&__step.is-active
+		color: $dark
+	&__footer
+		font-family: $montserrat
+		padding: 40px 0
+		text-align: center
+		p
+			font-size: 21px
+			padding-bottom: 25px
+			color: $gray
+	&__price
+		color: $dark	
+	&__btn
+		padding: 10px 80px 11px
+		min-width: 380px
+
+.table tr
+	border-bottom: 1px solid $inputBorder
+	font-size: 14px
+	text-align: left
+
+.table tr:first-child	
+	text-transform: uppercase
+
+.table tr th	
+	color: $gray
+	font-weight: 400
+	padding: 55px 0 10px
+
+.table tr:not(:first-child)
+	font-weight: 600
+	font-size: 14px
+	color: $dark
+
+.table tr td
+	text-align: left
+	vertical-align: middle
+	padding: 20px 0
+
+.table tr td:first-child
+	width: 80px
+
+.table tr td:nth-child(2)
+	width: 400px
+	padding-right: 20px
+
+.table tr td:nth-child(3)
+	width: 200px
+	padding-right: 20px		
+
+.table tr td:nth-child(4)
+	width: 200px
+	padding-right: 20px
+
+.table tr td:nth-child(5)
+	width: 200px
+	padding-right: 20px
+
+.table tr td:last-child
+	width: 100px
+	text-align: right
+
+.table tr td img
+	width: 60px
+	height: 60px
+
+.table .vendor-code
+	font-weight: 400
+	color: $gray
+
+.table .del-btn
+	background: none
+	border: none
+
+.table .del-btn	.icon-close
+	fill: $gray
+	opacity: .7			
+
+.counter
+	display: flex
+	align-items: center
+	justify-content: space-between
+	max-width: 125px
+	border-radius: 5px
+	border: 1px solid $inputBorder
+	padding: 7px 5px
+	font-size: 16px
+	&__input
+		padding-top: 2px
+		margin-left: 27px
+		max-width: 30px
+	&__minus,
+	&__plus
+		padding: 0 5px
+		color: $gray
+		font-size: 20px
+		line-height: 20px	
+		background: none
+		border: none
+		margin-bottom: 3px
+		.icon-plus
+			width: 10px
+			height: 10px
+	&__minus
+		.icon-minus
+			width: 10px
+			height: 10px
+
+
+				
+
+
+
+
