@@ -1,0 +1,25 @@
+.breadcrumbs
+	font-size: 0
+	&__item,
+	&__link
+		display: inline-block
+		vertical-align: top
+	&__item
+		&:not(:first-child)
+			&:before
+				content: '/'
+				display: inline-block
+				vertical-align: top
+				padding: 0 12px
+				color: $dark
+				opacity: 0.5
+				+f(13px, 400, 1.847)
+				letter-spacing: 0.025em
+	&__link
+		color: $dark
+		opacity: 0.5
+		+f(13px, 400, 1.847)
+		letter-spacing: 0.025em
+		transition: color 0.3s
+		+hover
+			color: $blue

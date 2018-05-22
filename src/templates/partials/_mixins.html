@@ -1,3 +1,13 @@
 {% macro icon(i, classList) %}
 <svg class="icon icon-{{i}} {{classList}}"><use xlink:href="img/sprite.svg#icon-{{i}}"></use></svg>
 {% endmacro %}
+
+{% macro bc(props) %}
+<ul class="breadcrumbs">
+	{% for item in props.list %}
+		<li class="breadcrumbs__item">
+			<a href="#" class="breadcrumbs__link">{{item}}</a>
+		</li>
+	{% endfor %}
+</ul>
+{% endmacro %}
