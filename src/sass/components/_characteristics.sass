@@ -1,0 +1,37 @@
+.characteristics
+	&__control
+		color: $blue
+		letter-spacing: .01em
+		+f(14px, null, null)
+		&:hover
+			text-decoration: underline
+	&__item
+		margin-bottom: 5px
+		font-size: 0
+	&__label
+		display: inline-block
+		vertical-align: middle
+		width: 38%
+		overflow: hidden
+		line-height: 1
+		&-in
+			position: relative
+			display: inline
+			color: $gray
+			letter-spacing: .01em
+			+f(14px, null, 24px)
+			&:before
+				content: ""
+				position: absolute
+				width: 2000px
+				left: 100%
+				bottom: 3px
+				border-bottom: 1px dotted #dcdcdc
+	&__value
+		display: inline-block
+		vertical-align: bottom
+		width: 62%
+		padding-left: 5px
+		color: #202020
+		letter-spacing: .01em
+		+f(14px, null, 24px)
