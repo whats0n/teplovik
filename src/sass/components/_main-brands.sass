@@ -1,0 +1,34 @@
+.main-brands
+	padding-top: 30px
+	&__items
+		margin: -10px
+		font-size: 0
+	&__item 
+		display: inline-block
+		vertical-align: top
+		padding: 10px
+		width: (100%/6)
+	&__box
+		display: block
+		text-align: center
+		+hover 
+			.main-brands
+				&__figure
+					background: $white
+				&__title
+					color: $blue
+	&__figure
+		border: 1px solid lightgrey
+		height: 115px
+		background: #efefef
+		+vertical 
+		transition: background 0.3s
+	&__img 
+		display: inline-block
+		vertical-align: middle
+		mix-blend-mode: multiply
+	&__title
+		padding-top: 10px
+		padding-bottom: 35px
+		color: $dark
+		+f(14px, null, 30px)

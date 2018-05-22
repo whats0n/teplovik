@@ -22,9 +22,9 @@
 			</div>
 		</div>
 		<div class="main-tabs__container">
-			{% for item in [ 'main-catalog', '', '', '' ] %}
+			{% for item in [ 'main-catalog', 'main-brands', '', '' ] %}
 				{% if item %}
-					<div class="main-tabs__content" data-tabs-content="{{item}}">
+					<div class="main-tabs__content" data-tabs-container="{{item}}">
 						{% include 'partials/components/_' + item + '.html' %}
 					</div>
 				{% endif %}
