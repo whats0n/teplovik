@@ -6,50 +6,68 @@ title: contacts
 {% block content %}
 
 	<div class="contacts">
-		<div class="map js-map"></div>
-		<div class="inner contacts__position">
-			<div class="block">
-				<div class="block__wrapper">
-					<div class="block__search">
-						<div class="block__label">Склад:</div>
-						<input type="text" placeholder="Западный проезд" class="block__search-input">
-						<span class="block__icon"></span>
-					</div>
-					<a href="tel:+74994504182" class="block__phone">+7 (499) 450-41-82</a>
-					<div class="block__time">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
-					<ul class="block-list">
-						<li class="block-list__item">
-							<div class="block-list__label">Адрес:</div>
-							<div class="block-list__value">г. Москва, 2-ой Западный проезд, дом 1, строение 1</div>
-						</li>
-						<li class="block-list__item">
-							<div class="block-list__label">E-mail:</div>
-							<a href="mailto:sale@teplovik.shop" class="block-list__value">sale@teplovik.shop</a>
-						</li>
-					</ul>
-				</div>
-				<div class="block__wrapper">
-					<div class="block__title">Как мы можем вам помочь?</div>
-					<form action="/" class="block__form">
-						<div class="block__form-wrapper">
-							<div class="block__input">
-								<input type="text" placeholder="Ваше имя" class="block__input-in">
-							</div>
-							<div class="block__input">
-								<input type="text" placeholder="E-mail" class="block__input-in">
-							</div>
-							<div class="block__textarea">
-								<textarea placeholder="Сообщение" class="block__textarea-in"></textarea>
-							</div>
+		<div class="contacts__map">
+			<div class="map js-map"></div>
+			<div class="inner contacts__position">
+				<div class="block">
+					<div class="block__wrapper">
+						<div class="block__search">
+							<div class="block__label">Склад:</div>
+							<input type="text" placeholder="Западный проезд" class="block__search-input">
+							<span class="block__icon"></span>
 						</div>
-						<button class="btn btn_blue block__btn">Отправить</button>
-					</form>
+						<a href="tel:+74994504182" class="block__phone">+7 (499) 450-41-82</a>
+						<div class="block__time">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
+						<ul class="block-list">
+							<li class="block-list__item">
+								<div class="block-list__label">Адрес:</div>
+								<div class="block-list__value">г. Москва, 2-ой Западный проезд, дом 1, строение 1</div>
+							</li>
+							<li class="block-list__item">
+								<div class="block-list__label">E-mail:</div>
+								<a href="mailto:sale@teplovik.shop" class="block-list__value">sale@teplovik.shop</a>
+							</li>
+						</ul>
+					</div>
+					<div class="block__wrapper">
+						<div class="block__title">Как мы можем вам помочь?</div>
+						<form action="/" class="block__form">
+							<div class="block__form-wrapper">
+								<div class="block__input">
+									<input type="text" placeholder="Ваше имя" class="block__input-in">
+								</div>
+								<div class="block__input">
+									<input type="text" placeholder="E-mail" class="block__input-in">
+								</div>
+								<div class="block__textarea">
+									<textarea placeholder="Сообщение" class="block__textarea-in"></textarea>
+								</div>
+							</div>
+							<button class="btn btn_blue block__btn">Отправить</button>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="contatcs__wrap">
-			<div class="contatcs__inner inner">
-
+		<div class="contacts__content">
+			<div class="inner">
+				<div class="grid">
+					<div class="grid__row">
+						<div class="grid__col grid__col_42-5">
+							<p class="contacts__text">Общество с ограниченной ответственностью «СИБИРЬ»</p>
+							<p class="contacts__text">Юридический адрес РФ, 124460, г. Москва, г. Зеленоград, 2-ой</p>
+							<p class="contacts__text">Западный проезд, дом 1, стр.1, эт.1, пом. XIБ, ком.1,2</p>
+						</div>
+						<div class="grid__col grid__col_42-5">
+							<p class="contacts__text">ИНН 7735153214</p>
+							<p class="contacts__text">ОГРН 1167746525825</p>
+							<p class="contacts__text">Банк АО "АЛЬФА-БАНК" г.Москва</p>
+							<p class="contacts__text">БИК 044525593</p>
+							<p class="contacts__text">Корр. счет 30101810200000000593</p>
+							<p class="contacts__text">Расчетный счет 40702810902470000542</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

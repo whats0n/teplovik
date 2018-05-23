@@ -1,11 +1,29 @@
 .contacts
-	position: relative
+	&__map
+		position: relative
 	&__position
 		position: absolute
 		left: 0
 		right: 0
 		top: 50%
 		transform: translateY(-50%)
+	&__content
+		padding: 40px 0
+		border-bottom: 1px solid $borderGray
+	&__text
+		letter-spacing: .025em
+		+f(13px, null, 1.847)
 .map
 	width: 100%
 	height: 600px
+	a[target="_blank"]
+		background-color: inherit
+		display: none
+	.gm-style div a img
+		display: none
+	.gm-style-cc
+		display: none
+
+.gmnoprint
+	width: 45px
+	height: 72px
