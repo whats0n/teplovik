@@ -1,0 +1,23 @@
+<!-- begin sorting -->
+<div class="sorting js-sorting">
+	<div class="sorting__label">
+		<div class="sorting__icon">
+			<i></i>
+		</div>
+		<div class="sorting__label-in">Сортировка:</div>
+	</div>
+	<div class="sorting__value js-sorting-control">
+		{{mixins.icon('arrow-down', 'sorting__arrow')}}
+		<div class="sorting__value-in js-sorting-value">По возрастанию цены</div>
+	</div>
+	<div class="sorting__dropdown js-sorting-dropdown">
+		<div class="sorting__body">
+			<ul class="sorting__list">
+				{% for item in [ 'По возрастанию цены', 'По убыванию цены', 'По рейтингу', 'Самые популярные' ] %}
+					<li class="sorting__item js-sorting-item" data-value="{{item}}">{{item}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- end sorting -->

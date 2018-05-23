@@ -1,0 +1,17 @@
+<!-- begin pagination -->
+<div class="pagination">
+	<a href="#" class="pagination__arrow pagination__prev">
+		{{mixins.icon('arrow-left', 'pagination__icon pagination__icon_prev')}}
+		В начало
+	</a>
+	<div class="pagination__pages">
+		{% for item in range(0,3) %}
+			<a href="#" class="pagination__page {% if loop.index == 2 %}is-active{% endif %}">{{loop.index}}</a>
+		{% endfor %}
+	</div>
+	<a href="#" class="pagination__arrow pagination__next">
+		{{mixins.icon('arrow-right', 'pagination__icon pagination__icon_next')}}
+		В конец
+	</a>
+</div>
+<!-- end pagination -->
