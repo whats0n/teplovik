@@ -61,5 +61,9 @@
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-glsl-loader": "^1.0.1"
+  },
+  "dependencies": {
+    "select2": "^4.0.6-rc.1",
+    "slick-carousel": "^1.8.1"
   }
 }
