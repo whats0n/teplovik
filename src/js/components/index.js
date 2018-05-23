@@ -7,3 +7,4 @@ import './accordion';
 import './sorting';
 import './card-slider';
 import './menu';
+import './modal';
