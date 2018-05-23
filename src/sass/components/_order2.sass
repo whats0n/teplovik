@@ -1,0 +1,148 @@
+.order
+	&__wrap
+		padding: 30px 0
+		background-color: $lightgray
+	&__row
+		margin: 0 -10px
+		display: flex
+		flex-wrap: wrap
+	&__col
+		padding: 0 10px
+		width: 49%
+	&__form
+		.form-control
+			&:nth-child(7)
+				margin-top: 2px
+	&__form-title
+		font-weight: 600	
+		color: $black
+		font-size: 21px
+		font-family: $montserrat
+		&:not(:first-child)
+			margin-top: 25px	
+	&__form-row
+		display: flex
+		align-items: flex-start
+	&__col-wrap
+		padding: 30px 55px 30px 30px
+		display: flex
+		width: 100%
+		flex-direction: column
+		justify-content: space-between
+		height: 100%	
+		background-color: $white	
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__edit
+		color: $gray
+		font-size: 13px
+		transition: color .3s
+		&:hover
+			color: $blue
+	&__total-price
+		color: $dark
+	&__main-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		color: $dark
+	&__text
+		margin-top: 35px
+		color: $gray
+		font-size: 13px
+	&__btn2
+		width: 100%
+		padding: 15px 0 15px
+	&__footer
+	&__footer_padding
+		padding-bottom: 0		
+		p
+			text-align: left
+	&__confidential-wrap
+		text-align: left
+		margin-bottom: 25px
+		.form__conditions:last-child
+			margin-top: 0
+
+.form-double
+	position: relative	
+	width: 50%
+	margin-top: 9px
+	&:first-child
+		input,
+		.label-checkbox
+			border-radius: 4px 0 0 4px
+			border-right: none
+	&:last-child
+		input,
+		.label-checkbox	
+			border-radius: 0 4px 4px 0
+
+.form-radio-pay
+	width: 50%
+	.label-radio
+		position: relative
+		display: block			
+		border: 1px solid $inputBorder
+		height: 45px
+		padding: 8px 0 10px
+		text-align: center
+		cursor: pointer
+		transition: background-color .3s, color .3s
+		&:hover
+			background-color: $lightgray
+			color: $blue
+	&:first-child		
+		.label-radio
+			border-radius: 4px 0 0 4px
+			border-right: none
+	&:last-child
+		.label-radio
+			border-radius: 0 4px 4px 0
+	.input-checked
+		display: none
+	.form-control:first-child
+		margin-top: 9px			
+	.input-checked:checked ~ .label-radio
+		background-color: $blue
+		color: $white
+		border: transparent
+
+
+
+.form-checkbox
+	display: flex
+	justify-content: flex-start
+	margin-top: 8px
+	&__label
+		left: 15px
+	input[type="checkbox"]
+		margin: 0 10px
+		position: relative
+		width: 60px
+		height: 34px
+		appearance: none
+		background-color: $white
+		outline: none
+		border-radius: 20px
+		border: 1px solid $inputBorder
+		transition: .3s
+		cursor: pointer
+	input[type="checkbox"]
+		&:before 
+			content: ''
+			position: absolute
+			width: 24px
+			height: 24px
+			border-radius: 50%
+			top: 50%
+			left: 4px
+			margin-top: -12px
+			background-color: $blue
+			transform: scale(1.1)
+			transition: .3s
+	input:checked[type="checkbox"]
+		&:before 
+			left: 30px

@@ -4,4 +4,5 @@ PageList:
 - file: home.html
 - file: forms.html
 - file: order1.html
+- file: order2.html
 - file: text.html
