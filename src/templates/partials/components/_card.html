@@ -4,7 +4,13 @@
 		<div class="card__col card__col_41">
 			<div class="case card__case">
 				<div class="case__slider">
-					<img src="img/case-logo.jpg" alt="logo" class="case__logo">
+					<div class="case__for js-slider-for">
+						{% for item in [
+							{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'}
+						]%}
+							<div class="case__item case__item_big"><img src="img/{{item.img}}.jpg" alt="product"></div>
+						{% endfor %}
+					</div>
 					<div class="case__nav js-slider-nav">
 						{% for item in [
 							{img: 'case-nav-01'},{img: 'case-nav-02'},{img: 'case-nav-03'},{img: 'case-nav-03'}
@@ -12,14 +18,7 @@
 							<div class="case__item case__item_small"><img src="img/{{item.img}}.jpg" alt="product"></div>
 						{% endfor %}
 					</div>
-					<div class="case__for js-slider-for">
-						{% for item in [
-							{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'}
-						]%}
-							<div class="case__item case__item_big"><img src="img/{{item.img}}.jpg" alt="product"></div>
-						{% endfor %}
-
-					</div>
+					<img src="img/case-logo.jpg" alt="logo" class="case__logo">
 				</div>
 			</div>
 		</div>
