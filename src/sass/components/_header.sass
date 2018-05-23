@@ -1,4 +1,5 @@
 .header
+	position: relative
 	padding: 18px 30px 27px
 	border-bottom: 1px solid #dcdcdc
 	font-size: 0
@@ -10,6 +11,8 @@
 		float: left
 		padding: 8px 20px 0 78px
 	&__btn 
+		display: inline-block
+		vertical-align: top
 		margin: 5px
 	&__actions
 		float: right
@@ -75,6 +78,60 @@
 		padding: 10px 15px 11px
 		color: currentColor
 		+f(14px, 400, 1)
+		letter-spacing: 0.01em
+		transition: color 0.3s
+		+hover
+			color: $blue
+
+.menu
+	position: absolute
+	z-index: 700
+	top: 100%
+	left: 50%
+	overflow: auto
+	width: 100vw
+	min-width: 1600px
+	max-height: calc(100vh - 100px)
+	opacity: 0
+	visibility: hidden
+	box-shadow: 0 4px 27px rgba(0, 0, 0, 0.14)
+	transform: translate3d(-50%,0,0)
+	transition: opacity 0.3s, visibility 0.3s
+	&.is-open
+		opacity: 1
+		visibility: visible
+	&__container
+		background: $white
+	&__list
+		clear: both
+		margin: 0 -10px
+		font-size: 0
+		+supports(column-count, 6)
+			column-count: 6
+	&__box
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding: 19px 10px
+		width: (100%/6)
+		+supports(column-count, 6)
+			display: list-item
+			width: auto
+			break-inside: avoid-column
+	&__title
+		display: block
+		margin-bottom: 12px
+		color: inherit
+		+f(13px, 700, 18px)
+		letter-spacing: 0.01em
+		transition: color 0.3s
+		+hover
+			color: $blue
+	&__link
+		display: block
+		padding: 4px 0
+		color: inherit
+		+f(13px, 400, 1.25)
 		letter-spacing: 0.01em
 		transition: color 0.3s
 		+hover
