@@ -4,3 +4,4 @@ import './counter';
 import './checkInputValue';
 import './gotop';
 import './accordion';
+import './sorting';
