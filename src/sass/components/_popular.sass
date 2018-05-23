@@ -10,12 +10,16 @@
 		display: inline-block
 		vertical-align: top
 		width: 33.33%
-		padding: 0 10px 20px
+		padding: 0 10px
+		margin-bottom: 20px
 	&__wrapper
 		background-color: $white
 		padding: 15px 30px
 		display: flex
 		align-items: center
+		transition: box-shadow .24s
+		+hover
+			box-shadow: 0 0 18px rgba(0, 0, 1, 0.16)
 	&__content
 		flex-grow: 1
 		padding-left: 30px
