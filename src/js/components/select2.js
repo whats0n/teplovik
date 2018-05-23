@@ -4,5 +4,3 @@ $('.js-select-department').select2({
   placeholder: 'Город *',
   minimumResultsForSearch: Infinity
 });
-
-console.log('sfsf');
