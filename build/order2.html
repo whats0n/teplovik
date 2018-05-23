@@ -179,14 +179,15 @@
                         <!-- begin form-control -->
                         <div class="form-control">
                           <div class="input js-input">
-                            <input id="first-city" type="text" value="">
-                            <label for="first-city" class="label"> Город * </label>
-                            <div class="icon-valid">
-                              <svg class="icon icon-check ">
-                                <use xlink:href="img/sprite.svg#icon-check"></use>
-                              </svg>
+                            <div class="podrobno__row-select">
+                              <select class="js-select-department select-style" style="width: 100%">
+                                <option value=""></option>
+                                <option value="AL">Город *</option>
+                                <option value="WY">Киев</option>
+                                <option value="WY">Чернигов</option>
+                                <option value="WY">Харьков</option>
+                              </select>
                             </div>
-                            <div class="error-text">Invalid Field</div>
                           </div>
                           <div class="form__question question js-tooltip" title="Вы должны ввести свой город">
                             <svg class="icon icon-question ">
