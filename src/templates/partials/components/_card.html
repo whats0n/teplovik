@@ -1,0 +1,87 @@
+<!-- begin card -->
+<div class="card">
+	<div class="card__row">
+		<div class="card__col card__col_41">
+			<div class="case card__case">
+				<div class="case__slider">
+					<img src="img/case-logo.jpg" alt="logo" class="case__logo">
+					<div class="case__nav">
+						{% for item in [
+							{img: 'case-nav-01'},{img: 'case-nav-02'},{img: 'case-nav-03'}
+						]%}
+							<div class="case__item case__item_small"><img src="img/{{item.img}}.jpg" alt="product"></div>
+						{% endfor %}
+					</div>
+					<div class="case__for">
+						{% for item in [
+							{img: 'case-for-01'}
+						]%}
+							<div class="case__item case__item_big"><img src="img/{{item.img}}.jpg" alt="product"></div>
+						{% endfor %}
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card__col card__col_58">
+			<div class="card__wrapper">
+				<div class="card__info">
+					<div class="card__title">Котел электрический ЭПО-9, 45/220В с&nbsp;пультом</div>
+					<ul class="card__meta">
+						<li>Артикул: <span>B1HC043</span></li>
+						<li>Страна: <span>Голландия</span></li>
+					</ul>
+					{% set characteristics = {
+						classList: 'card__characteristics',
+						control: 'Все характеристики',
+						items: [
+							{label: 'Мощность', value: '9,45 кВт'},
+							{label: 'Ступени', value: '1 или 3 ступени мощности'},
+							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
+							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
+							{label: 'Пульт управления', value: 'Выносной'},
+							{label: 'КПД', value: '99%'}
+						]
+					} %}
+					{% include 'partials/components/_characteristics.html' %}
+
+					<div class="card__total">
+						<div class="card__price"><span>322</span> руб.</div>
+						<div class="card__qua">
+							<div class="counter card__counter js-counter">
+								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
+								<input class="counter__input js-counter-input" type="text" value="1">
+								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
+							</div>
+						</div>
+						<div class="card__availability">
+							<span>Наличие:</span>
+							Много
+							<div class="card__progress">
+								<i class="card__progress-item is-active"></i>
+								<i class="card__progress-item is-active"></i>
+								<i class="card__progress-item is-active"></i>
+								<i class="card__progress-item is-active"></i>
+								<i class="card__progress-item is-active"></i>
+								<i class="card__progress-item"></i>
+							</div>
+						</div>
+					</div>
+					<div class="card__controls">
+						<button class="btn btn_blue card__controls-btn card__control">В корзину</button>
+						<button class="btn card__controls-btn card__control">Купить в 1 клик</button>
+						<button class="card__action card__control card__control_indent">
+							{{mixins.icon('like', 'card__controls-icon')}}
+							<span>В избранное</span>
+						</button>
+						<button class="card__action card__control">
+							{{mixins.icon('business', 'card__controls-icon')}}
+							<span>Сравнить</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end card -->

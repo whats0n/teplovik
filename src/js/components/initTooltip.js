@@ -1,8 +1,13 @@
 import tooltipster from 'tooltipster';
-const container = $('.js-tooltip');
+const containers = $('.js-tooltip');
 
-container.tooltipster({
-  animation: 'fade',
-  delay: 0,
-  side: 'right'
+containers.each((i, container) => {
+  container = $(container);
+  const position = container.data('position');
+
+  container.tooltipster({
+	  animation: 'fade',
+	  delay: 0,
+	  side: position && position.length ? position : 'right'
+  });
 });

@@ -1,0 +1,26 @@
+<!-- begin popular -->
+<div class="popular">
+	<div class="inner">
+		<div class="title-md popular__title">Дополнительно вам может пригодится</div>
+		<ul class="popular__list">
+			{% for item in [
+				{img: 'popular-img-00', label: 'Угольник для радиаторов 1/2', price: '322 руб.'},
+				{img: 'popular-img-01', label: 'Гидравлический сепаратор', price: '1 560 руб.'},
+				{img: 'popular-img-02', label: 'Гребенка распределительная настенная .', price: '12 678 руб.'}
+			] %}
+				<li class="popular__item">
+					<a href="#" class="popular__wrapper">
+						<div class="popular__img">
+							<img src="img/{{item.img}}.jpg" alt="popular" class="popular__img-in">
+						</div>
+						<div class="popular__content">
+							<div class="popular__label">{{item.label}}</div>
+							<div class="popular__price">{{item.price}}</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end popular -->
