@@ -1,7 +1,7 @@
 export default class Map {
   constructor(config) {
     this._mapHTML = config.map.get(0);
-    this._icon = './img/marker.png';
+    this._icon = './img/marker.svg';
     this._center = {
       lat: 56.00772542,
       lng: 37.19483232,
@@ -16,7 +16,7 @@ export default class Map {
   _createMap() {
     this._map = new google.maps.Map(this._mapHTML, {
       center: this._center,
-      zoom: 16,
+      zoom: 15,
       disableDefaultUI: true,
       scrollwheel: false,
       zoomControl: true,
@@ -46,7 +46,7 @@ export default class Map {
           'elementType': 'labels',
           'stylers': [
             {
-              'visibility': 'off'
+              'visibility': 'on'
             }
           ]
         },
@@ -76,7 +76,7 @@ export default class Map {
           'elementType': 'labels',
           'stylers': [
             {
-              'visibility': 'off'
+              'visibility': 'on'
             }
           ]
         },
@@ -85,8 +85,11 @@ export default class Map {
           'elementType': 'labels',
           'stylers': [
             {
-              'visibility': 'off'
-            }
+              'visibility': 'on'
+            },
+            // {
+            //   'color': '#747f84'
+            // }
           ]
         },
         {
@@ -130,7 +133,8 @@ export default class Map {
       position: this._center,
       map: null,
       icon: {
-        url: that._icon
+        url: that._icon,
+        scaledSize: new google.maps.Size(45, 72),
       }
     });
 
@@ -148,4 +152,3 @@ if (map.length) {
   });
 };
 
-console.log('sdf');
