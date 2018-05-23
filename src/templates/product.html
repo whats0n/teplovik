@@ -7,6 +7,9 @@ title: product
 
 	<div class="main">
 		<div class="inner">
+			{{mixins.bc({
+					list: [ 'Главная', 'Каталог', 'Котельное оборудование', 'Котел электрический' ]
+				})}}
 			{% include 'partials/components/_card.html' %}
 		</div>
 		{% include 'partials/components/_popular.html' %}

@@ -23,3 +23,24 @@
 </label>
 <!-- end checkbox -->
 {% endmacro %}
+
+{% macro characteristics(props) %}
+<div class="characteristics {{props.classList}}">
+	{% if props.title %}
+		<div class="title-md product-info__title">{{props.title}}</div>
+	{% endif %}
+	<ul class="characteristics__list">
+		{% for item in props.items %}
+			<li class="characteristics__item">
+				<div class="characteristics__label">
+					<div class="characteristics__label-in">{{item.label}}</div>
+				</div>
+				<div class="characteristics__value">{{item.value}}</div>
+			</li>
+		{% endfor %}
+	</ul>
+	{% if props.control %}
+		<a href="#" class="characteristics__control">{{props.control}}</a>
+	{% endif %}
+</div>
+{% endmacro %}
