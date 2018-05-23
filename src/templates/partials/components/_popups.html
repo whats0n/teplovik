@@ -1,7 +1,7 @@
 <!-- begin popup -->
-<div class="popup">
-	<div class="popup__inner">
-		<button class="popup__close" type="button">{{ mixins.icon('close') }}</button>
+<div class="popup js-modal" data-modal="register">
+	<div class="popup__inner js-modal-prevent">
+		<button class="popup__close js-modal-control" data-target="register" type="button">{{ mixins.icon('close') }}</button>
 		<div class="popup__title">Регистрация</div>
 		<!-- begin popup-tabs -->
 		<div class="popup-tabs" data-tabs>
@@ -194,8 +194,13 @@
 		</div>
 		<!-- end popup-tabs -->
 	</div>
-	<div class="popup__inner">
-		<button class="popup__close" type="button">{{ mixins.icon('close') }}</button>
+</div>
+<!-- end popup -->
+
+<!-- begin popup -->
+<div class="popup js-modal" data-modal="login">
+	<div class="popup__inner js-modal-prevent">
+		<button class="popup__close js-modal-control" data-target="register" type="button">{{ mixins.icon('close') }}</button>
 		<div class="popup__title">Войти</div>
 		<!-- begin form -->
 		<form action="/" class="form">
@@ -258,8 +263,13 @@
 		</form>
 		<!-- end form -->
 	</div>
-	<div class="popup__inner">
-		<button class="popup__close" type="button">{{ mixins.icon('close') }}</button>
+</div>
+<!-- end popup -->
+
+<!-- begin popup -->
+<div class="popup js-modal" data-modal="password">
+	<div class="popup__inner js-modal-prevent">
+		<button class="popup__close js-modal-control" data-modal="password" type="button">{{ mixins.icon('close') }}</button>
 		<div class="popup__reestablish">
 			<div class="popup__title">Восстановление пароля</div>
 			<div class="popup__description">Ведите E-mail, указанный при регистрации</div>

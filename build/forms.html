@@ -484,12 +484,22 @@
       </header>
       <!-- end header -->
       <div class="main">
-        <div class="inner"> </div>
+        <div class="inner">
+          <div>
+            <a href="#" class="js-modal-control" data-target="register">Регистрация</a>
+          </div>
+          <div>
+            <a href="#" class="js-modal-control" data-target="login">Войти</a>
+          </div>
+          <div>
+            <a href="#" class="js-modal-control" data-target="password">Восстановление пароля</a>
+          </div>
+        </div>
       </div>
       <!-- begin popup -->
-      <div class="popup">
-        <div class="popup__inner">
-          <button class="popup__close" type="button">
+      <div class="popup js-modal" data-modal="register">
+        <div class="popup__inner js-modal-prevent">
+          <button class="popup__close js-modal-control" data-target="register" type="button">
             <svg class="icon icon-close ">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
@@ -803,8 +813,12 @@
           </div>
           <!-- end popup-tabs -->
         </div>
-        <div class="popup__inner">
-          <button class="popup__close" type="button">
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup js-modal" data-modal="login">
+        <div class="popup__inner js-modal-prevent">
+          <button class="popup__close js-modal-control" data-target="register" type="button">
             <svg class="icon icon-close ">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
@@ -904,8 +918,12 @@
           </form>
           <!-- end form -->
         </div>
-        <div class="popup__inner">
-          <button class="popup__close" type="button">
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup js-modal" data-modal="password">
+        <div class="popup__inner js-modal-prevent">
+          <button class="popup__close js-modal-control" data-modal="password" type="button">
             <svg class="icon icon-close ">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
