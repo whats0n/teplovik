@@ -17,9 +17,417 @@
           <a href="#" class="logo">
             <img src="img/logo.jpg" alt="Тепловик"> </a>
           <div class="header__btns">
-            <button class="btn btn_blue header__btn">Каталог</button>
-            <button class="btn btn_blue header__btn">Бренды</button>
-            <button class="btn btn_orange header__btn">Акции</button>
+            <div class="header__btn">
+              <button class="btn btn_blue js-menu-control" data-target="catalog">Каталог</button>
+              <div class="menu header__menu js-menu" data-container="catalog">
+                <div class="menu__container">
+                  <div class="inner">
+                    <ul class="menu__list">
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Котельное оборудование</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Газовые</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Электрические</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Твердотопливные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Автоматика</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Дымоходы</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Запорная арматура</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Шаровые краны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Задвижки</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Обратные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Сетчатые фильтры</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Вентили для радиаторов</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Мультифлексы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Клапаны для бытовой</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Сервоприводы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термоголовки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Канализация</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Шумопоглощающая канализация</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Насосы</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Циркуляционные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Скважинные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Колодецные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Дренажные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Насосные станции</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Канализационные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Предохранит. арматура</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Группы безопасности</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Предохранительные </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Воздухоотводчики</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Редукторы давления</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Перепускные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Подпиточные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Обратные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Соленоидные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Амортизаторы </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Защита от протечек воды</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Инструмент</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для труб сшитого полиэтилена</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для резки труб</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Радиаторы</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Биметаллические</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Алюминиевые</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Стальные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Коллекторы и аксессуары</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Коллекторные группы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Распределительные </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">коллекторы для воды</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Коллекторные шкафы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Группы автономной </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Автоматика</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термостаты</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Управляющие модули</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">GSM климат</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Температурные датчики</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Реле</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Водонагреватели и бойлеры</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Электрические</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Косвенного нагрева</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комбинированные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Регулирующая арматура</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Трехходовые смесители</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термостатические смесители</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Балансировочные клапаны</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Сервоприводы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Вентили для радиаторов</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термоголовки</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термостатические вентили для радиаторов</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Мультифлексы</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Расходные материалы</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Герметики анаэробные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Лен</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Крепеж</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Заглушки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Котельная арматура</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Распределительные </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Насосные группы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Гидрострелки</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Узлы для теплого пола </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Сервоприводы</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Электрооборудование</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Стабилизаторы напряжения</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Источники бесперебойного питания</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Защита от скачков напряжения</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Аварийное освещение</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Контрольно -&nbsp;измерительная арматура</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Манометры</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термометры</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термоманометры</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термостаты</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Реле</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Фитинги для труб</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для труб из сшитого </a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Фитинги резьбовые</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Фитинги для коллекторов</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Трубы</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Сшитый полиэтилен</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Гофры</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Мембранные баки</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для систем отопления</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для водоснабжения</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектующие</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Фильтры</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Самопромывные</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Для водоснабжения</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Картриджи</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Грубой очистки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu__box">
+                        <a href="#" class="menu__title">Теплые полы</a>
+                        <ul class="menu__submenu">
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Маты</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Кабели</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Термостаты</a>
+                          </li>
+                          <li class="menu__item">
+                            <a href="#" class="menu__link">Комплектация для водяного ТП</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header__btn">
+              <button class="btn btn_blue">Бренды</button>
+            </div>
+            <div class="header__btn">
+              <button class="btn btn_orange">Акции</button>
+            </div>
           </div>
           <div class="header__actions">
             <a href="#" class="header__action">
@@ -1102,17 +1510,17 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-baxi.png" alt="baxi" class="v-item__logo">
+                      <img src="img/catalog/baxi.png" alt="baxi" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-1.png" alt="item-1" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
                       <div class="v-item__price">322 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>
@@ -1121,17 +1529,17 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-rifar.png" alt="rifar" class="v-item__logo">
+                      <img src="img/catalog/rifar.png" alt="rifar" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-2.png" alt="item-2" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Гидравлический сепаратор</a>
                       <div class="v-item__price">1 780 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>
@@ -1140,17 +1548,17 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-viega.png" alt="viega" class="v-item__logo">
+                      <img src="img/catalog/viega.png" alt="viega" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-3.png" alt="item-3" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
                       <div class="v-item__price">5 600 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>
@@ -1159,17 +1567,17 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-gorenje.png" alt="gorenje" class="v-item__logo">
+                      <img src="img/catalog/gorenje.png" alt="gorenje" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-4.png" alt="item-4" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
                       <div class="v-item__price">322 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>
@@ -1178,17 +1586,17 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-rehau.png" alt="rehau" class="v-item__logo">
+                      <img src="img/catalog/rehau.png" alt="rehau" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-5.png" alt="item-5" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Гидравлический сепаратор</a>
                       <div class="v-item__price">1 780 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>
@@ -1197,17 +1605,245 @@
                 <div class="catalog__item">
                   <div class="v-item">
                     <div class="v-item__inner">
-                      <img src="img/brands/brand-viessmann.png" alt="viessmann" class="v-item__logo">
+                      <img src="img/catalog/viessmann.png" alt="viessmann" class="v-item__logo">
                       <a href="#" class="v-item__figure">
                         <img src="img/catalog/item-6.png" alt="item-6" class="v-item__img"> </a>
                       <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
                       <div class="v-item__price">5 600 руб.</div>
                       <div class="v-item__btns">
-                        <div class="v-item__btn">
-                          <button class="btn btn_blue btn_wide">В корзину</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
                         </div>
-                        <div class="v-item__btn">
-                          <button class="btn btn_wide">Купить в 1 клик</button>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/baxi.png" alt="baxi" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-1.png" alt="item-1" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
+                      <div class="v-item__price">322 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/rifar.png" alt="rifar" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-2.png" alt="item-2" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гидравлический сепаратор</a>
+                      <div class="v-item__price">1 780 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/viega.png" alt="viega" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-3.png" alt="item-3" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
+                      <div class="v-item__price">5 600 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/gorenje.png" alt="gorenje" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-4.png" alt="item-4" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
+                      <div class="v-item__price">322 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/rehau.png" alt="rehau" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-5.png" alt="item-5" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гидравлический сепаратор</a>
+                      <div class="v-item__price">1 780 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/viessmann.png" alt="viessmann" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-6.png" alt="item-6" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
+                      <div class="v-item__price">5 600 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/baxi.png" alt="baxi" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-1.png" alt="item-1" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
+                      <div class="v-item__price">322 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/rifar.png" alt="rifar" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-2.png" alt="item-2" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гидравлический сепаратор</a>
+                      <div class="v-item__price">1 780 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/viega.png" alt="viega" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-3.png" alt="item-3" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
+                      <div class="v-item__price">5 600 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/gorenje.png" alt="gorenje" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-4.png" alt="item-4" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гребенка распределительная настенная</a>
+                      <div class="v-item__price">322 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/rehau.png" alt="rehau" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-5.png" alt="item-5" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Гидравлический сепаратор</a>
+                      <div class="v-item__price">1 780 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__item">
+                  <div class="v-item">
+                    <div class="v-item__inner">
+                      <img src="img/catalog/viessmann.png" alt="viessmann" class="v-item__logo">
+                      <a href="#" class="v-item__figure">
+                        <img src="img/catalog/item-6.png" alt="item-6" class="v-item__img"> </a>
+                      <a href="#" class="v-item__title">Угольник для радиаторов 1/2</a>
+                      <div class="v-item__price">5 600 руб.</div>
+                      <div class="v-item__btns">
+                        <div class="v-item__control">
+                          <button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+                        </div>
+                        <div class="v-item__control">
+                          <button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
                         </div>
                       </div>
                     </div>

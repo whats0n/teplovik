@@ -4,22 +4,21 @@
 		<div class="card__col card__col_41">
 			<div class="case card__case">
 				<div class="case__slider">
-					<img src="img/case-logo.jpg" alt="logo" class="case__logo">
-					<div class="case__nav">
+					<div class="case__for js-slider-for">
 						{% for item in [
-							{img: 'case-nav-01'},{img: 'case-nav-02'},{img: 'case-nav-03'}
+							{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'},{img: 'case-for-01'}
+						]%}
+							<div class="case__item case__item_big"><img src="img/{{item.img}}.jpg" alt="product"></div>
+						{% endfor %}
+					</div>
+					<div class="case__nav js-slider-nav">
+						{% for item in [
+							{img: 'case-nav-01'},{img: 'case-nav-02'},{img: 'case-nav-03'},{img: 'case-nav-03'}
 						]%}
 							<div class="case__item case__item_small"><img src="img/{{item.img}}.jpg" alt="product"></div>
 						{% endfor %}
 					</div>
-					<div class="case__for">
-						{% for item in [
-							{img: 'case-for-01'}
-						]%}
-							<div class="case__item case__item_big"><img src="img/{{item.img}}.jpg" alt="product"></div>
-						{% endfor %}
-
-					</div>
+					<img src="img/case-logo.jpg" alt="logo" class="case__logo">
 				</div>
 			</div>
 		</div>
@@ -31,7 +30,7 @@
 						<li>Артикул: <span>B1HC043</span></li>
 						<li>Страна: <span>Голландия</span></li>
 					</ul>
-					{% set characteristics = {
+					{{mixins.characteristics({
 						classList: 'card__characteristics',
 						control: 'Все характеристики',
 						items: [
@@ -42,9 +41,7 @@
 							{label: 'Пульт управления', value: 'Выносной'},
 							{label: 'КПД', value: '99%'}
 						]
-					} %}
-					{% include 'partials/components/_characteristics.html' %}
-
+					})}}
 					<div class="card__total">
 						<div class="card__price"><span>322</span> руб.</div>
 						<div class="card__qua">

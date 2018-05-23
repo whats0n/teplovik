@@ -29,64 +29,66 @@ title: Index page
 						</div>
 					</div>
 					<div class="catalog__items">
-						{% for item in [
-							{
-								logo: 'baxi',
-								img: 'item-1',
-								title: 'Угольник для радиаторов 1/2',
-								price: '322 руб.'
-							},
-							{
-								logo: 'rifar',
-								img: 'item-2',
-								title: 'Гидравлический сепаратор',
-								price: '1 780 руб.'
-							},
-							{
-								logo: 'viega',
-								img: 'item-3',
-								title: 'Гребенка распределительная  настенная',
-								price: '5 600 руб.'
-							},
-							{
-								logo: 'gorenje',
-								img: 'item-4',
-								title: 'Гребенка распределительная  настенная',
-								price: '322 руб.'
-							},
-							{
-								logo: 'rehau',
-								img: 'item-5',
-								title: 'Гидравлический сепаратор',
-								price: '1 780 руб.'
-							},
-							{
-								logo: 'viessmann',
-								img: 'item-6',
-								title: 'Угольник для радиаторов 1/2',
-								price: '5 600 руб.'
-							}
-						] %}
-							<div class="catalog__item">
-								<div class="v-item">
-									<div class="v-item__inner">
-										<img src="img/brands/brand-{{item.logo}}.png" alt="{{item.logo}}" class="v-item__logo">
-										<a href="#" class="v-item__figure">
-											<img src="img/catalog/{{item.img}}.png" alt="{{item.img}}" class="v-item__img">
-										</a>
-										<a href="#" class="v-item__title">{{item.title}}</a>
-										<div class="v-item__price">{{item.price}}</div>
-										<div class="v-item__btns">
-											<div class="v-item__btn">
-												<button class="btn btn_blue btn_wide">В корзину</button>
-											</div>
-											<div class="v-item__btn">
-												<button class="btn btn_wide">Купить в 1 клик</button>
+						{% for item in range(0,3) %}
+							{% for item in [
+								{
+									logo: 'baxi',
+									img: 'item-1',
+									title: 'Угольник для радиаторов 1/2',
+									price: '322 руб.'
+								},
+								{
+									logo: 'rifar',
+									img: 'item-2',
+									title: 'Гидравлический сепаратор',
+									price: '1 780 руб.'
+								},
+								{
+									logo: 'viega',
+									img: 'item-3',
+									title: 'Гребенка распределительная  настенная',
+									price: '5 600 руб.'
+								},
+								{
+									logo: 'gorenje',
+									img: 'item-4',
+									title: 'Гребенка распределительная  настенная',
+									price: '322 руб.'
+								},
+								{
+									logo: 'rehau',
+									img: 'item-5',
+									title: 'Гидравлический сепаратор',
+									price: '1 780 руб.'
+								},
+								{
+									logo: 'viessmann',
+									img: 'item-6',
+									title: 'Угольник для радиаторов 1/2',
+									price: '5 600 руб.'
+								}
+							] %}
+								<div class="catalog__item">
+									<div class="v-item">
+										<div class="v-item__inner">
+											<img src="img/catalog/{{item.logo}}.png" alt="{{item.logo}}" class="v-item__logo">
+											<a href="#" class="v-item__figure">
+												<img src="img/catalog/{{item.img}}.png" alt="{{item.img}}" class="v-item__img">
+											</a>
+											<a href="#" class="v-item__title">{{item.title}}</a>
+											<div class="v-item__price">{{item.price}}</div>
+											<div class="v-item__btns">
+												<div class="v-item__control">
+													<button class="btn btn_blue btn_wide btn_sm v-item__btn">В корзину</button>
+												</div>
+												<div class="v-item__control">
+													<button class="btn btn_wide btn_sm v-item__btn">Купить в 1 клик</button>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+							{% endfor %}
 						{% endfor %}
 					</div>
 					<div class="catalog__bottom">

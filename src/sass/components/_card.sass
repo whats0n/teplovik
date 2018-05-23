@@ -1,5 +1,5 @@
 .card
-	margin-bottom: 50px
+	margin: 50px 0
 	&__row
 		margin: 0 -15px
 		+clr
@@ -31,6 +31,7 @@
 			margin: 10px
 			color: $gray-lighten
 			+f(14px, null, 1)
+			letter-spacing: .01em
 			span
 				color: #202020
 	&__characteristics
@@ -121,6 +122,12 @@
 		top: 0
 		width: 80px
 		height: 100%
+		.slick-current
+			.case__item_small
+				&:after
+					background: $blue
+			img
+				opacity: 1
 	&__for
 		padding-left: 120px
 	&__item
@@ -136,3 +143,17 @@
 			height: 460px
 		&_small
 			height: 100px
+			position: relative
+			cursor: pointer
+			&:after
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 3px
+				background: transparent
+				transition: background .24s
+			img
+				opacity: .6
+				transition: opacity .24s

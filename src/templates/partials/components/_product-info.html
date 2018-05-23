@@ -1,16 +1,16 @@
 <!-- begin product-info -->
 <div class="product-info">
 	<div class="inner">
-		<div class="grid">
+		<div class="grid product-info__grid">
 			<div class="grid__row">
 				<div class="grid__col grid__col_50">
 					<div class="product-info__description">
 						<div class="title-md product-info__title">Описание</div>
 						<p>К современным системам отопления обычно подходят алюминиевые или сталеалюминевые (по-другому – биметаллические) батареи. <br /> Они легки, красивы и очень удобны в обращении. С помощью простого устройства – стального радиаторного ниппеля отдельные секции собираются в радиатор необходимой тепловой мощности. Иногда к нему подсоединяют ручные регуляторы, позволяющие выбрать степень нагрева.</p>
 					</div>
-					<div class="title-md product-info__title">Характеристики</div>
-					{% set characteristics = {
-						classList: 'card__characteristics',
+					{{mixins.characteristics({
+						classList: 'product-info__characteristics',
+						title: 'Характеристики',
 						items: [
 							{label: 'Мощность', value: '9,45 кВт'},
 							{label: 'Ступени', value: '1 или 3 ступени мощности'},
@@ -25,8 +25,7 @@
 							{label: 'Пульт управления', value: 'Выносной'},
 							{label: 'КПД', value: '99%'}
 						]
-					} %}
-					{% include 'partials/components/_characteristics.html' %}
+					})}}
 				</div>
 				<div class="grid__col grid__col_50">
 					<div class="product-info__doc">
@@ -69,6 +68,30 @@
 						</ul>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="similar product-info__similar">
+			<div class="title-md similar__title">
+				Похожие товары
+				<a href="#" class="similar__link">Все похожие товары</a>
+			</div>
+			<div class="similar__products">
+				{% for item in [
+					{img: 'similar-00', label: 'Угольник для радиаторов 1/2', price: '322 руб.'},
+					{img: 'similar-01', label: 'Гидравлический сепаратор', price: '1 780 руб.'},
+					{img: 'similar-02', label: 'Гребенка распределительная настенная ', price: '5 600 руб.'},
+					{img: 'similar-00', label: 'Угольник для радиаторов 1/2', price: '322 руб.'}
+				] %}
+					<div class="similar__wrapper">
+						<a href="#" class="similar__item">
+							<div class="similar__img">
+								<img src="img/{{item.img}}.jpg" alt="product" class="similar__img-in">
+							</div>
+							<div class="similar__label">{{item.label}}</div>
+							<div class="similar__price">{{item.price}}</div>
+						</a>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
