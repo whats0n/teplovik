@@ -7,3 +7,4 @@ export const OWL = 'owl-carousel';
 
 export const DOC = $(document);
 export const BODY = $('body');
+export const HTMLBODY = $('html, body');

@@ -25,7 +25,7 @@
 {% endmacro %}
 
 {% macro characteristics(props) %}
-<div class="characteristics {{props.classList}}">
+<div class="characteristics {{props.classList}}" {{props.attrs | safe}}>
 	{% if props.title %}
 		<div class="title-md product-info__title">{{props.title}}</div>
 	{% endif %}
@@ -40,7 +40,7 @@
 		{% endfor %}
 	</ul>
 	{% if props.control %}
-		<a href="#" class="characteristics__control">{{props.control}}</a>
+		<a href="#" class="characteristics__control" {{props.controlAttrs | safe}}>{{props.control}}</a>
 	{% endif %}
 </div>
 {% endmacro %}
