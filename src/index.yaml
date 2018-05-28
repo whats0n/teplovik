@@ -8,4 +8,5 @@ PageList:
 - file: order2.html
 - file: text.html
 - file: catalog.html
+- file: product.html
 - file: contacts.html

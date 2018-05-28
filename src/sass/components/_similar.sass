@@ -1,7 +1,7 @@
 .similar
 	padding-top: 50px
 	&__title
-		margin-bottom: 50px
+		margin-bottom: 40px
 		letter-spacing: .01em
 		+clr
 	&__link
@@ -9,6 +9,7 @@
 		margin: 10px 0 0 20px
 		color: $blue
 		+f(14px, null, 1)
+		transition: color .24s
 		+hover
 			color: $lightBlue
 	&__products
@@ -22,7 +23,11 @@
 	&__item
 		display: block
 		text-align: center
+		padding: 10px 0
 		color: $dark
+		transition: box-shadow .24s
+		+hover
+			box-shadow: 0 0 18px rgba(0, 0, 1, 0.16)
 	&__img
 		height: 155px
 		margin-bottom: 16px

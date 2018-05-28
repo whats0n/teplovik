@@ -8,6 +8,7 @@ $('.js-slider-for').slick({
 $('.js-slider-nav').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  verticalSwiping : true,
   vertical: true,
   focusOnSelect: true,
   arrows: false,
