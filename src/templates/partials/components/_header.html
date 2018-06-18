@@ -1,6 +1,10 @@
 <!-- begin header -->
 <header class="header">
 	<div class="header__inner">
+		<button class="btn-nav js-modal-control" data-target="mobile-menu">
+			<span class="btn-nav__icon"></span>
+			<span class="btn-nav__title">Меню</span>
+		</button>
 		<a href="#" class="logo">
 			<img src="img/logo.jpg" alt="Тепловик">
 		</a>
@@ -142,3 +146,148 @@
 	</div>
 </header>
 <!-- end header -->
+
+<!-- begin mobile-menu -->
+<div class="mobile-menu js-modal js-modal-prevent" data-modal="mobile-menu">
+	<button class="mobile-menu__close js-modal-close">
+		{{mixins.icon('close')}}
+	</button>
+	<div class="mobile-menu__inner">
+		<div class="mobile-menu__actions">
+			{% for item in [ 'user', 'like', 'business', 'cart' ] %}
+			    <a href="#" class="mobile-menu__action">
+			    	{% if item == 'cart' %}
+						<span class="mobile-menu__sticker">4</span>
+			    	{% endif %}
+			    	{{mixins.icon(item, 'mobile-menu__icon mobile-menu__' + item)}}
+			    </a>
+			{% endfor %}
+		</div>
+		<div class="mobile-menu__btns">
+			<div class="mobile-menu__btn">
+				<button class="btn btn_blue mobile-menu__btn-control js-menu-control" data-target="mobile-catalog">Каталог</button>
+			</div>
+			<div class="mobile-menu__btn">
+				<button class="btn btn_blue mobile-menu__btn-control">Бренды</button>
+			</div>
+			<div class="mobile-menu__btn">
+				<button class="btn btn_orange mobile-menu__btn-control">Акции</button>
+			</div>
+			<div class="menu header__menu js-menu" data-container="mobile-catalog">
+				<div class="menu__container">
+					<div class="inner">
+						<ul class="menu__list">
+							{% for item in [
+								{
+									title: 'Котельное  оборудование',
+									list: [ 'Газовые', 'Электрические', 'Твердотопливные', 'Комплектующие', 'Автоматика', 'Дымоходы' ]
+								},
+								{
+									title: 'Запорная арматура',
+									list: [ 'Шаровые краны', 'Задвижки', 'Обратные клапаны', 'Сетчатые фильтры', 'Вентили для радиаторов', 'Мультифлексы', 'Клапаны для бытовой', 'Сервоприводы', 'Термоголовки' ]
+								},
+								{
+									title: 'Канализация',
+									list: [ 'Шумопоглощающая  канализация' ]
+								},
+								{
+									title: 'Насосы',
+									list: [ 'Циркуляционные', 'Скважинные', 'Колодецные', 'Дренажные', 'Насосные станции', 'Канализационные', 'Комплектующие' ]
+								},
+								{
+									title: 'Предохранит. арматура',
+									list: [ 'Группы безопасности', 'Предохранительные ', 'Воздухоотводчики', 'Редукторы давления', 'Перепускные клапаны', 'Подпиточные клапаны', 'Обратные клапаны', 'Соленоидные клапаны', 'Амортизаторы ', 'Защита от протечек воды' ]
+								},
+								{
+									title: 'Инструмент',
+									list: [ 'Для труб сшитого полиэтилена', 'Для резки труб' ]
+								},
+								{
+									title: 'Радиаторы',
+									list: [ 'Биметаллические', 'Алюминиевые', 'Стальные', 'Комплектующие' ]
+								},
+								{
+									title: 'Коллекторы  и аксессуары',
+									list: [ 'Коллекторные группы', 'Распределительные ', 'коллекторы для воды', 'Коллекторные шкафы', 'Группы автономной ', 'Комплектующие ' ]
+								},
+								{
+									title: 'Автоматика',
+									list: [ 'Термостаты', 'Управляющие модули', 'GSM климат', 'Температурные датчики', 'Реле' ]
+								},
+								{
+									title: 'Водонагреватели  и бойлеры',
+									list: [ 'Электрические', 'Косвенного нагрева', 'Комбинированные', 'Комплектующие' ]
+								},
+								{
+									title: 'Регулирующая арматура',
+									list: [ 'Трехходовые смесители', 'Термостатические смесители', 'Балансировочные клапаны', 'Сервоприводы', 'Вентили для радиаторов', 'Термоголовки', 'Термостатические вентили для радиаторов', 'Мультифлексы' ]
+								},
+								{
+									title: 'Расходные материалы',
+									list: [ 'Герметики анаэробные', 'Лен', 'Крепеж', 'Заглушки' ]
+								},
+								{
+									title: 'Котельная арматура',
+									list: [ 'Распределительные ', 'Насосные группы', 'Гидрострелки', 'Узлы для теплого пола ', 'Сервоприводы', 'Комплектующие' ]
+								},
+								{
+									title: 'Электрооборудование',
+									list: [ 'Стабилизаторы напряжения', 'Источники бесперебойного питания', 'Защита от скачков напряжения', 'Аварийное освещение' ]
+								},
+								{
+									title: 'Контрольно -&nbsp;измерительная арматура',
+									list: [ 'Манометры', 'Термометры', 'Термоманометры', 'Комплектующие', 'Термостаты', 'Реле' ]
+								},
+								{
+									title: 'Фитинги для труб',
+									list: [ 'Для труб из сшитого ', 'Фитинги резьбовые', 'Фитинги для коллекторов' ]
+								},
+								{
+									title: 'Трубы',
+									list: [ 'Сшитый полиэтилен', 'Гофры' ]
+								},
+								{
+									title: 'Мембранные баки',
+									list: [ 'Для систем отопления', 'Для водоснабжения', 'Комплектующие' ]
+								},
+								{
+									title: 'Фильтры',
+									list: [ 'Самопромывные', 'Для водоснабжения', 'Картриджи', 'Грубой очистки' ]
+								},
+								{
+									title: 'Теплые полы',
+									list: [ 'Маты', 'Кабели', 'Термостаты', 'Комплектация для водяного ТП' ]
+								}
+							] %}
+								<li class="menu__box">
+									<a href="#" class="menu__title">{{item.title | safe}}</a>
+									<ul class="menu__submenu">
+										{% for item in item.list %}
+											<li class="menu__item">
+												<a href="#" class="menu__link">{{item | safe}}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="mobile-nav">
+			<ul class="mobile-nav__list">
+				{% for item in [ 'Доставка', 'Оплата', 'О компании', 'Контакты' ] %}
+					<li class="mobile-nav__item">
+						<a href="#" class="mobile-nav__link"><span>{{item}}</span></a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+		<div class="mobile-menu__info">
+			<a href="tel:+74994504182" class="mobile-menu__phone">+7 (499) 450-41-82</a>
+			<div class="mobile-menu__schedule">пн–пт: с 9:30 до 18:00  /  сб-вс: выходной</div>
+		</div>
+	</div>
+</div>
+<!-- end mobile-menu -->
