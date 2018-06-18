@@ -3,7 +3,9 @@
 	padding: 18px 30px 27px
 	border-bottom: 1px solid #dcdcdc
 	font-size: 0
-	display: none
+	// display: none
+	+xl 
+		padding: 5px 15px 10px
 	&__inner
 		margin: 0 auto
 		max-width: 1540px
@@ -11,6 +13,11 @@
 	&__btns
 		float: left
 		padding: 8px 20px 0 78px
+		+xl 
+			padding: 2px 0 0 78px
+			margin-bottom: -2px
+		+sm 
+			display: none
 	&__btn
 		display: inline-block
 		vertical-align: top
@@ -19,6 +26,8 @@
 		float: right
 		padding: 10px 0 1px
 		margin: 0 -16px 0 29px
+		+xl 
+			display: none
 	&__action
 		position: relative
 		display: inline-block
@@ -47,6 +56,8 @@
 	&__info
 		float: right
 		padding: 13px 0 0
+		+xl
+			display: none
 	&__phone
 		display: block
 		color: inherit
@@ -66,11 +77,16 @@
 .logo
 	float: left
 	font-size: 0
+	img
+		+xl 
+			height: 44px
 
 .nav
 	overflow: visible
 	text-align: center
 	padding: 13px 20px 5px 0
+	+xl
+		display: none
 	&__item
 		display: inline-block
 		vertical-align: top
@@ -91,13 +107,24 @@
 	left: 50%
 	overflow: auto
 	width: 100vw
-	min-width: 1600px
-	max-height: calc(100vh - 100px)
+	// min-width: 1600px
+	max-height: calc(100vh - 99px)
 	opacity: 0
 	visibility: hidden
 	box-shadow: 0 4px 27px rgba(0, 0, 0, 0.14)
 	transform: translate3d(-50%,0,0)
 	transition: opacity 0.3s, visibility 0.3s
+	+xl
+		max-height: calc(100vh - 60px)
+	+sm
+		position: relative
+		display: none
+		padding: 20px 10px
+		max-height: none
+		opacity: 1
+		visibility: visible
+		box-shadow: none
+		text-align: left
 	&.is-open
 		opacity: 1
 		visibility: visible
@@ -109,15 +136,32 @@
 		font-size: 0
 		+supports(column-count, 6)
 			column-count: 6
+			+md 
+				column-count: 4
+			+xmd 
+				column-count: 3
+			+sm 
+				column-count: 2
+			+xs 
+				column-count: 1
 	&__box
 		position: relative
 		display: inline-block
 		vertical-align: top
 		padding: 19px 10px
 		width: (100%/6)
+		+md 
+			width: (100%/4)
+		+xmd 
+			width: (100%/3)
+		+sm 
+			width: (100%/2)
+		+xs 
+			width: 100%
+			text-align: center
 		+supports(column-count, 6)
 			display: list-item
-			width: auto
+			width: auto !important
 			break-inside: avoid-column
 	&__title
 		display: block
@@ -137,3 +181,36 @@
 		transition: color 0.3s
 		+hover
 			color: $blue
+
+.btn-nav
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	display: none
+	padding: 0 15px 0 0
+	+vertical 
+	+xl 
+		display: block
+	&__title,
+	&__icon 
+		display: inline-block
+		vertical-align: middle
+	&__title
+		padding: 1px 0 0 14px
+		color: $dark
+		font-family: $opensans
+		+f(14px, null, 30px)
+	&__icon 
+		position: relative
+		width: 29px
+		height: 11px
+		border-top: 1px solid $dark
+		border-bottom: 1px solid $dark
+		&:before
+			content: ''
+			position: absolute
+			top: 4px
+			left: 0
+			right: 0
+			border-top: 1px solid $dark
