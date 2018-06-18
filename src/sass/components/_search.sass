@@ -1,4 +1,8 @@
 .search
+	+xmd
+		margin-top: 10px
+	+sm
+		margin-top: 0
 	&__form
 		position: relative
 	&__input
@@ -14,6 +18,12 @@
 		font-family: $opensans
 		+f(17px, 400, normal)
 		letter-spacing: 0.01em
+		+sm
+			height: 38px
+			border-radius: 7px
+			padding-left: 10px
+			padding-right: 40px
+			font-size: 14px
 		&::placeholder
 			color: $dark
 			opacity: 0.5
@@ -26,8 +36,14 @@
 		width: 55px
 		background: none
 		+vertical
-	&__icon 
+		+xmd
+			width: 40px
+			text-align: right
+			padding-right: 6px
+	&__icon
 		display: inline-block
 		vertical-align: middle
 		fill: #3aa0d1
 		font-size: 21px
+		+sm
+			font-size: 16px

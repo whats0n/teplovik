@@ -2,6 +2,11 @@
 	padding-top: 3px
 	+xmd
 		padding: 50px 55px 0
+	+sm
+		padding-left: 0
+		padding-right: 0
+	+xs
+		padding-top: 0
 	&__categories
 		clear: both
 		margin: 0 -10px
@@ -11,12 +16,9 @@
 		+md
 			+supports(column-count, 2)
 				column-count: 2
-		// +sm
-		// 	+supports(column-count, 2)
-		// 		column-count: 2
-		// +xs
-		// 	+supports(column-count, 1)
-		// 		column-count: 1
+		+xs
+			+supports(column-count, 1)
+				column-count: 1
 	&__category
 		position: relative
 		display: inline-block
@@ -32,14 +34,11 @@
 			width: 50%
 			+supports(column-count, 2)
 				width: auto
-		// +sm
-		// 	width: 50%
-		// 	+supports(column-count, 2)
-		// 		width: auto
-		// +xs
-		// 	width: 100%
-		// 	+supports(column-count, 1)
-		// 		width: auto
+		+xs
+			width: 100%
+			padding: 15px 10px 45px
+			+supports(column-count, 1)
+				width: auto
 	&__category-in
 		position: relative
 		padding-left: 70px
