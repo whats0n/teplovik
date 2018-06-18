@@ -19,11 +19,18 @@
 		left: 0
 		right: 0
 		bottom: 0
-		padding: 21px 30px 
+		padding: 21px 30px
+		+xmd
+			padding: 20px
 	&__title
 		+f(18px, 700, 30px)
 		letter-spacing: -0.025em
 		+text-overflow
+		+xmd
+			max-width: 138px
+			margin-bottom: 3px
+			+f(16px, null, 21px)
+			white-space: normal
 	&__link
 		position: relative
 		display: inline-block
@@ -43,17 +50,36 @@
 		position: absolute
 		top: 45px
 		left: 30px
+		+xmd
+			max-width: 94px
+			left: 20px
 	&__item
 		position: absolute
 		top: 45px
 		right: 44px
+		+md
+			max-width: 42px
+			top: 15px
+			right: 15px
 		~ .banner__content
 			padding-right: 130px
+			+md
+				padding-right: 30px
+			+xmd
+				padding-right: 20px
 	&__rehau
 		position: absolute
 		top: 29px
 		left: 30px
+		+xmd
+			top: 36px
+			left: 20px
+			max-width: 86px
 	&__card
 		position: absolute
 		top: 14px
 		left: 30px
+		+xmd
+			top: 14px
+			left: 20px
+			max-width: 78px

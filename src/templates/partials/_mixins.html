@@ -25,11 +25,11 @@
 {% endmacro %}
 
 {% macro characteristics(props) %}
-<div class="characteristics {{props.classList}}" {{props.attrs | safe}}>
+<div class="characteristics {{props.classList.main}}" {{props.attrs | safe}}>
 	{% if props.title %}
 		<div class="title-md product-info__title">{{props.title}}</div>
 	{% endif %}
-	<ul class="characteristics__list">
+	<ul class="characteristics__list {{props.classList.list}}">
 		{% for item in props.items %}
 			<li class="characteristics__item">
 				<div class="characteristics__label">

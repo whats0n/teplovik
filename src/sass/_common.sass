@@ -1,5 +1,4 @@
 body
-	min-width: 1600px
 	color: $dark
 	background: $white
 	font-family: $opensans
@@ -7,6 +6,8 @@ body
 
 .main
 	padding-top: 17px
+	+md
+		padding-top: 10px
 
 .inner
 	position: relative
@@ -16,11 +17,9 @@ body
 	margin-right: auto
 	max-width: 1210px
 	+clr
-
-.title-md
-	font-family: $montserrat
-	+f(21px, 500, 1.715)
-	letter-spacing: .025em
+	+sm
+		padding-left: 10px
+		padding-right: 10px
 
 .section
 	&:not(:last-child)

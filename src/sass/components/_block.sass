@@ -2,9 +2,16 @@
 	padding: 35px 0 10px
 	max-width: 390px
 	background: $white
+	+sm
+		max-width: 100%
+		padding: 25px 0 0
+		margin: 0 -10px
+		max-width: none
 	&__wrapper
 		padding: 0 40px
 		margin-bottom: 30px
+		+sm
+			padding: 0 10px
 		&:not(:last-child)
 			border-bottom: 1px solid $borderGray
 	&__search
@@ -21,6 +28,7 @@
 			color: $dark
 			letter-spacing: .01em
 			+f(14px, null, normal)
+			background: none
 			+placeholder-color($dark)
 	&__label
 		padding: 10px 0
@@ -58,6 +66,8 @@
 		+f(22px, 700, .864)
 		+hover
 			color: $blue
+		+sm
+			font-size: 19px
 	&__time
 		+f(12px, null, 2.5)
 		letter-spacing: .01em
@@ -66,6 +76,9 @@
 	&__title
 		margin-bottom: 20px
 		+f(18px, 700, 1)
+		+sm
+			font-size: 16px
+			margin-bottom: 15px
 	&__form
 		font-size: 0
 		&-wrapper

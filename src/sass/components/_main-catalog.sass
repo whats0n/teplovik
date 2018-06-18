@@ -1,18 +1,20 @@
 .main-catalog
 	padding-top: 3px
+	+xmd
+		padding: 50px 55px 0
 	&__categories
 		clear: both
 		margin: 0 -10px
 		font-size: 0
 		+supports(column-count, 4)
 			column-count: 4
-		// +md 
-		// 	+supports(column-count, 3)
-		// 		column-count: 3
-		// +sm 
+		+md
+			+supports(column-count, 2)
+				column-count: 2
+		// +sm
 		// 	+supports(column-count, 2)
 		// 		column-count: 2
-		// +xs 
+		// +xs
 		// 	+supports(column-count, 1)
 		// 		column-count: 1
 	&__category
@@ -26,15 +28,15 @@
 			display: list-item
 			width: auto
 			break-inside: avoid-column
-		// +md 
-		// 	width: 33.33%
-		// 	+supports(column-count, 3)
-		// 		width: auto
-		// +sm 
+		+md
+			width: 50%
+			+supports(column-count, 2)
+				width: auto
+		// +sm
 		// 	width: 50%
 		// 	+supports(column-count, 2)
 		// 		width: auto
-		// +xs 
+		// +xs
 		// 	width: 100%
 		// 	+supports(column-count, 1)
 		// 		width: auto

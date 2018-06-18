@@ -3,10 +3,18 @@
 	&__inner
 		padding-top: 55px
 		padding-bottom: 35px
+		+xmd
+			padding-top: 35px
+			padding-bottom: 25px
+		+sm
+			padding-top: 5px
+			padding-bottom: 25px
 	&__subtitle
 		display: block
 		color: inherit
 		font-weight: 600
+		+sm
+			display: none
 	&__item
 		padding: 6px 0 5px
 	&__link
@@ -31,7 +39,7 @@
 		transition: color 0.3s
 		+hover
 			color: $blue
-		strong 
+		strong
 			font-weight: 600
 	&__meta
 		padding: 6px 0 5px
@@ -42,41 +50,109 @@
 	&__nav
 		float: left
 		width: 34%
+		+xmd
+			width: 50%
+		+sm
+			display: none
 	&__col
 		float: left
 		padding-right: 20px
 		width: 50%
-	&__list 
+	&__list
 		padding-top: 9px
 	&__info
 		float: left
 		padding-right: 20px
 		padding-left: 100px
 		width: 42%
+		+xmd
+			width: 50%
+			padding: 0
+		+sm
+			display: none
 	&__media
 		float: right
 		width: 24%
 		max-width: 180px
+		+xmd
+			width: 100%
+			max-width: 100%
+			padding-top: 35px
+		+sm
+			padding-top: 0
+			float: none
+		&-wrapper
+			+xmd
+				width: 50%
+				float: right
+				padding-top: 15px
+			+sm
+				width: 100%
+				padding-top: 0
+				margin-bottom: 10px
+				text-align: center
 	&__bottom
 		clear: both
 		padding-top: 19px
 		+clr
+		+xmd
+			padding-top: 30px
+		+sm
+			clear: none
+			&:after
+				display: none
 	&__market
 		width: 100%
-		img 
+		+xmd
+			max-width: 300px
+			display: inline-block
+			background-color: #efefef
+		+sm
+			width: 50%
+			max-width: 100%
+			float: left
+		img
 			display: block
 			max-width: 100%
+			+xmd
+				max-height: 100px
+				margin: 0 auto
+				max-width: 100%
+			+sm
+				max-height: 50px
 	&__copy
 		float: left
 		padding-top: 6px
 		padding-right: 20px
 		width: 17%
 		opacity: 0.5
+		+xmd
+			width: auto
+			padding-right: 30px
+			font-size: 13px
+		+sm
+			float: none
+			display: block
+			padding-right: 0
+			text-align: center
+			clear: both
+			padding-top: 20px
 	&__rules
 		float: left
 		padding-top: 6px
 		padding-right: 20px
 		width: 25%
+		+xmd
+			width: auto
+			max-width: 160px
+			font-size: 13px
+		+sm
+			clear: both
+			max-width: 100%
+			width: 100%
+			text-align: center
+			padding-right: 0
+			padding-top: 17px
 		&-link
 			color: inherit
 			opacity: 0.5
@@ -85,17 +161,30 @@
 				color: $blue
 				opacity: 1
 	&__payments
-		float: left
+		float: right
 		width: 58%
 		font-size: 0
+		+xmd
+			width: 50%
+			float: right
+		+sm
+			float: left
+			background: #f6f6f6
+			text-align: center
+			padding: 15px 0
 	&__payment,
 	&__payment-link
 		display: inline-block
 		vertical-align: middle
 	&__payment
 		padding-right: 28px
-		img 
+		+sm
+			padding: 0 6px
+			margin-bottom: 1px
+		img
 			display: block
+			+sm
+				height: 11px
 
 a.footer__subtitle
 	transition: color 0.3s
@@ -105,8 +194,12 @@ a.footer__subtitle
 .social
 	margin: 10px -14px 23px
 	font-size: 0
+	+xmd
+		margin-bottom: 0
+	+sm
+		margin-top: 0
 	&__item,
-	&__link 
+	&__link
 		display: inline-block
 		vertical-align: top
 	&__link
@@ -142,9 +235,14 @@ a.footer__subtitle
 	+vertical
 	transform: translate3d(63px, -50%, 0)
 	transition: color 0.3s, background 0.3s
+	+r(1450)
+		left: auto
+		right: 73px
+	+xmd
+		display: none
 	+hover
 		background: $lightBlue
-	&__icon 
+	&__icon
 		display: inline-block
 		vertical-align: middle
 		fill: currentColor

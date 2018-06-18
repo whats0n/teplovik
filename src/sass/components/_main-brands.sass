@@ -1,17 +1,28 @@
 .main-brands
 	padding-top: 30px
+	+xmd
+		padding-top: 20px
+	+xs
+		padding-top: 0
 	&__items
 		margin: -10px
 		font-size: 0
-	&__item 
+		+xs
+			margin: -5px
+	&__item
 		display: inline-block
 		vertical-align: top
 		padding: 10px
 		width: (100%/6)
+		+xmd
+			width: (100%/4)
+		+xs
+			width: (100%/3)
+			padding: 5px
 	&__box
 		display: block
 		text-align: center
-		+hover 
+		+hover
 			.main-brands
 				&__figure
 					background: $white
@@ -21,12 +32,17 @@
 		border: 1px solid lightgrey
 		height: 115px
 		background: #efefef
-		+vertical 
+		+vertical
 		transition: background 0.3s
-	&__img 
+		+xs
+			height: 60px
+	&__img
 		display: inline-block
 		vertical-align: middle
 		mix-blend-mode: multiply
+		+xs
+			max-height: 70%
+			max-width: 70%
 	&__title
 		padding-top: 10px
 		padding-bottom: 35px
@@ -34,3 +50,8 @@
 		+f(14px, null, 30px)
 		letter-spacing: 0.01em
 		transition: color 0.3s
+		+xmd
+			padding-bottom: 20px
+		+xs
+			font-size: 13px
+			padding: 2px 0 5px

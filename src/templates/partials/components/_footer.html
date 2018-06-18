@@ -38,25 +38,23 @@
 			</div>
 		</div>
 		<div class="footer__media">
-			<div class="footer__subtitle">Присоединяйтесь</div>
-			<ul class="social footer__social">
-				{% for item in [ 'instagram', 'vk', 'facebook' ] %}
-					<li class="social__item">
-						<a href="#" class="social__link">
-							{{mixins.icon(item, 'social__icon social__' + item)}}
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
+			<div class="footer__media-wrapper">
+				<div class="footer__subtitle">Присоединяйтесь</div>
+				<ul class="social footer__social">
+					{% for item in [ 'instagram', 'vk', 'facebook' ] %}
+						<li class="social__item">
+							<a href="#" class="social__link">
+								{{mixins.icon(item, 'social__icon social__' + item)}}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
 			<a href="#" class="footer__market">
 				<img src="img/yandex.png" alt="yandex market">
 			</a>
 		</div>
 		<div class="footer__bottom">
-			<div class="footer__copy">© 2017-2018 Teplovik</div>
-			<div class="footer__rules">
-				<a href="#" class="footer__rules-link">Политика конфиденциальности</a>
-			</div>
 			<ul class="footer__payments">
 				{% for item in [ 'visa', 'master', 'yandex-money', 'rbk' ] %}
 					<li class="footer__payment">
@@ -66,6 +64,10 @@
 					</li>
 				{% endfor %}
 			</ul>
+			<div class="footer__copy">© 2017-2018 Teplovik</div>
+			<div class="footer__rules">
+				<a href="#" class="footer__rules-link">Политика конфиденциальности</a>
+			</div>
 		</div>
 	</div>
 </footer>

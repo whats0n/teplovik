@@ -3,32 +3,13 @@
 	<div class="inner">
 		<div class="grid product-info__grid">
 			<div class="grid__row">
-				<div class="grid__col grid__col_50">
+				<div class="grid__col grid__col_50 grid__col_xmd-100">
 					<div class="product-info__description">
 						<div class="title-md product-info__title">Описание</div>
 						<p>К современным системам отопления обычно подходят алюминиевые или сталеалюминевые (по-другому – биметаллические) батареи. <br /> Они легки, красивы и очень удобны в обращении. С помощью простого устройства – стального радиаторного ниппеля отдельные секции собираются в радиатор необходимой тепловой мощности. Иногда к нему подсоединяют ручные регуляторы, позволяющие выбрать степень нагрева.</p>
 					</div>
-					{{mixins.characteristics({
-						classList: 'product-info__characteristics',
-						attrs: 'data-scrollto-container="characteristics"',
-						title: 'Характеристики',
-						items: [
-							{label: 'Мощность', value: '9,45 кВт'},
-							{label: 'Ступени', value: '1 или 3 ступени мощности'},
-							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
-							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
-							{label: 'Пульт управления', value: 'Выносной'},
-							{label: 'КПД', value: '99%'},
-							{label: 'Мощность', value: '9,45 кВт'},
-							{label: 'Ступени', value: '1 или 3 ступени мощности'},
-							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
-							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
-							{label: 'Пульт управления', value: 'Выносной'},
-							{label: 'КПД', value: '99%'}
-						]
-					})}}
 				</div>
-				<div class="grid__col grid__col_50">
+				<div class="grid__col grid__col_50 grid__col_xmd-100">
 					<div class="product-info__doc">
 						<div class="title-md product-info__title">Документы</div>
 						<ul class="doc-list">
@@ -40,7 +21,7 @@
 								},
 								{
 									img: 'doc',
-									label: 'Сертификат соответствия на котел электрический <br /> №TC RU C-RU.МН32.В.00110',
+									label: 'Сертификат соответствия на котел электрический  №TC RU C-RU.МН32.В.00110',
 									value: '(2.3 Mb)'
 								},
 								{
@@ -68,6 +49,32 @@
 							{% endfor %}
 						</ul>
 					</div>
+				</div>
+			</div>
+			<div class="grid__row">
+				<div class="grid__col grid__col_50 grid__col_xmd-100">
+					{{mixins.characteristics({
+						classList: {
+							main: 'product-info__characteristics',
+							list: 'product-info__characteristics-list characteristics__list_block'
+						},
+						attrs: 'data-scrollto-container="characteristics"',
+						title: 'Характеристики',
+						items: [
+							{label: 'Мощность', value: '9,45 кВт'},
+							{label: 'Ступени', value: '1 или 3 ступени мощности'},
+							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
+							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
+							{label: 'Пульт управления', value: 'Выносной'},
+							{label: 'КПД', value: '99%'},
+							{label: 'Мощность', value: '9,45 кВт'},
+							{label: 'Ступени', value: '1 или 3 ступени мощности'},
+							{label: 'ТЭНы', value: 'из нержавеющей стали Backer (Чехия)'},
+							{label: 'Регулировка температуры', value: 'от 30 до 85°С'},
+							{label: 'Пульт управления', value: 'Выносной'},
+							{label: 'КПД', value: '99%'}
+						]
+					})}}
 				</div>
 			</div>
 		</div>

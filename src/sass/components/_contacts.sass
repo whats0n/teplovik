@@ -1,21 +1,38 @@
 .contacts
 	&__map
 		position: relative
+		overflow: hidden
 	&__position
 		position: absolute
 		left: 0
 		right: 0
 		top: 50%
 		transform: translateY(-50%)
+		+sm
+			transform: translate3d(0,0,0)
+			top: 0
+			position: static
 	&__content
 		padding: 40px 0
 		border-bottom: 1px solid $borderGray
+		+xmd
+			padding: 25px 0 35px
+		+sm
+			padding-top: 0
 	&__text
-		letter-spacing: .025em
-		+f(13px, null, 1.847)
+		&_left
+			p
+				+xmd
+					margin-bottom: 12px
+		p
+			letter-spacing: .025em
+			+f(13px, null, 1.847)
 .map
-	width: 100%
 	height: 600px
+	margin: 0 -50%  0 0
+	+sm
+		height: 280px
+		margin: 0
 	a[target="_blank"]
 		background-color: inherit
 		display: none

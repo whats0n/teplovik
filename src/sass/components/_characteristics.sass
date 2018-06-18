@@ -1,8 +1,28 @@
 .characteristics
+	&__list
+		&_block
+			.characteristics
+				&__label
+					width: 100%
+					display: block
+					&-in
+						font-size: 14px
+						line-height: 1
+						&:before
+							display: none
+				&__value
+					width: 100%
+					line-height: 1
+					font-size: 14px
+					padding-left: 0
+				&__item
+					margin-bottom: 20px
 	&__control
 		color: $blue
 		letter-spacing: .01em
 		+f(14px, null, null)
+		+sm
+			font-size: 12px
 		&:hover
 			text-decoration: underline
 	&__item
@@ -14,12 +34,16 @@
 		width: 38%
 		overflow: hidden
 		line-height: 1
+		+sm
+			width: 50%
 		&-in
 			position: relative
 			display: inline
 			color: $gray-lighten
 			letter-spacing: .01em
 			+f(14px, null, 24px)
+			+sm
+				font-size: 12px
 			&:before
 				content: ""
 				position: absolute
@@ -35,3 +59,6 @@
 		color: #202020
 		letter-spacing: .01em
 		+f(14px, null, 24px)
+		+sm
+			width: 50%
+			font-size: 12px

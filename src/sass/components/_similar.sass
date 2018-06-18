@@ -1,9 +1,14 @@
 .similar
 	padding-top: 50px
+	overflow: hidden
+	+xs
+		padding-top: 20px
 	&__title
 		margin-bottom: 40px
 		letter-spacing: .01em
 		+clr
+		+xs
+			margin-bottom: 15px
 	&__link
 		float: right
 		margin: 10px 0 0 20px
@@ -12,14 +17,21 @@
 		transition: color .24s
 		+hover
 			color: $lightBlue
+		+xmd
+			display: none
 	&__products
 		font-size: 0
 		margin: 0 -30px
+		+xmd
+			margin: 0 -15px
 	&__wrapper
 		display: inline-block
 		vertical-align: top
 		width: 25%
 		padding: 0 30px
+		+xmd
+			padding: 0 15px
+			width: 50%
 	&__item
 		display: block
 		text-align: center
@@ -28,10 +40,16 @@
 		transition: box-shadow .24s
 		+hover
 			box-shadow: 0 0 18px rgba(0, 0, 1, 0.16)
+		+xmd
+			margin-bottom: 35px
+		+xs
+			padding: 0
 	&__img
 		height: 155px
 		margin-bottom: 16px
 		+vertical
+		+xs
+			height: 90px
 		&-in
 			display: inline-block
 			vertical-align: middle
@@ -41,6 +59,10 @@
 		margin-bottom: 5px
 		+f(14px, null, 1.5)
 		letter-spacing: .01em
+		+xs
+			font-size: 12px
 	&__price
 		+f(14px, 700, 2.143)
 		letter-spacing: .01em
+		+xs
+			font-size: 12px

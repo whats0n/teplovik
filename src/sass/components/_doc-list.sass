@@ -6,9 +6,13 @@
 		vertical-align: top
 		padding: 0 10px 20px
 		width: 50%
+		+xs
+			width: 100%
 	&__wrapper
 		display: block
 		+clr
+		+xs
+			display: inline-block
 		+hover
 			.doc-list
 				&__label
@@ -29,6 +33,7 @@
 		+f(14px, null, 21px)
 		letter-spacing: .01em
 	&__label
+		max-width: 198px
 		color: $blue
 		transition: color .24s
 	&__value

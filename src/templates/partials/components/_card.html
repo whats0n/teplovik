@@ -31,7 +31,7 @@
 						<li>Страна: <span>Голландия</span></li>
 					</ul>
 					{{mixins.characteristics({
-						classList: 'card__characteristics',
+						classList: {main: 'card__characteristics'},
 						control: 'Все характеристики',
 						controlAttrs: 'data-scrollto-control="characteristics"',
 						items: [
@@ -45,37 +45,47 @@
 					})}}
 					<div class="card__total">
 						<div class="card__price"><span>322</span> руб.</div>
-						<div class="card__qua">
-							<div class="counter card__counter js-counter">
-								<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
-								<input class="counter__input js-counter-input" type="text" value="1">
-								<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
+						<div class="card__total-wrapper">
+							<div class="card__qua">
+								<div class="counter card__counter js-counter">
+									<button class="counter__minus js-counter-minus" type="button">{{mixins.icon('minus')}}</button>
+									<input class="counter__input js-counter-input" type="text" value="1">
+									<button class="counter__plus js-counter-plus" type="button">{{mixins.icon('plus')}}</button>
+								</div>
 							</div>
-						</div>
-						<div class="card__availability">
-							<span>Наличие:</span>
-							Много
-							<div class="card__progress">
-								<i class="card__progress-item is-active"></i>
-								<i class="card__progress-item is-active"></i>
-								<i class="card__progress-item is-active"></i>
-								<i class="card__progress-item is-active"></i>
-								<i class="card__progress-item is-active"></i>
-								<i class="card__progress-item"></i>
+							<div class="card__availability">
+								<span>Наличие:</span>
+								Много
+								<div class="card__progress">
+									<i class="card__progress-item is-active"></i>
+									<i class="card__progress-item is-active"></i>
+									<i class="card__progress-item is-active"></i>
+									<i class="card__progress-item is-active"></i>
+									<i class="card__progress-item is-active"></i>
+									<i class="card__progress-item"></i>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="card__controls">
-						<button class="btn btn_blue card__controls-btn card__control">В корзину</button>
-						<button class="btn card__controls-btn card__control">Купить в 1 клик</button>
-						<button class="card__action card__control card__control_indent">
-							{{mixins.icon('like', 'card__controls-icon')}}
-							<span>В избранное</span>
-						</button>
-						<button class="card__action card__control">
-							{{mixins.icon('business', 'card__controls-icon')}}
-							<span>Сравнить</span>
-						</button>
+						<div class="card__control-wrapper">
+							<button class="btn btn_blue card__controls-btn card__control">В корзину</button>
+						</div>
+						<div class="card__control-wrapper">
+							<button class="btn card__controls-btn card__control">Купить в 1 клик</button>
+						</div>
+						<div class="card__control-wrapper">
+							<button class="card__action card__control card__control_indent">
+								{{mixins.icon('like', 'card__controls-icon')}}
+								<span>В избранное</span>
+							</button>
+						</div>
+						<div class="card__control-wrapper">
+							<button class="card__action card__control">
+								{{mixins.icon('business', 'card__controls-icon')}}
+								<span>Сравнить</span>
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
