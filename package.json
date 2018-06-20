@@ -51,18 +51,19 @@
     "lint-staged": "^7.0.4",
     "lodash": "^4.3.0",
     "lost": "^7.1.0",
+    "perfect-scrollbar": "^1.4.0",
     "postcss-csso": "^3.0.0",
     "require-dir": "^1.0.0",
     "require-yaml": "^0.0.1",
     "run-sequence": "^2.2.1",
+    "select2": "^4.0.6-rc.1",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
     "through2": "^2.0.1",
     "tooltipster": "^4.2.6",
     "webpack": "^4.6.0",
     "webpack-bundle-analyzer": "^2.11.1",
-    "webpack-glsl-loader": "^1.0.1",
-    "select2": "^4.0.6-rc.1"
+    "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
     "select2": "^4.0.6-rc.1",

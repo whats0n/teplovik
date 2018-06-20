@@ -4,6 +4,8 @@
 		width: 100%
 		border-bottom: 1px solid $inputBorder
 		padding-bottom: 15px
+		+sm
+			display: none
 	&__steps-inner
 		display: flex
 		align-items: center
@@ -12,9 +14,11 @@
 		color: $gray-blue
 		font-weight: 600
 		font-size: 16px
-	&__step	
+	&__step
 		position: relative
 		padding-left: 70px
+		+md
+			padding-left: 60px
 		&:first-child
 			padding-left: 0
 			&::before
@@ -32,13 +36,17 @@
 		font-family: $montserrat
 		padding: 40px 0
 		text-align: center
+		+sm
+			padding-top: 20px
 		p
 			text-align: center
 			font-size: 21px
 			padding-bottom: 20px
 			color: $gray
+			+sm
+				font-size: 16px
 	&__price
-		color: $dark	
+		color: $dark
 	&__btn
 		padding: 10px 80px 11px
 		min-width: 380px
@@ -48,10 +56,10 @@
 	font-size: 14px
 	text-align: left
 
-.table tr:first-child	
+.table tr:first-child
 	text-transform: uppercase
 
-.table tr th	
+.table tr th
 	color: $gray
 	font-weight: 400
 	padding: 55px 0 10px
@@ -75,7 +83,7 @@
 
 .table tr td:nth-child(3)
 	width: 200px
-	padding-right: 20px		
+	padding-right: 20px
 
 .table tr td:nth-child(4)
 	width: 200px
@@ -103,7 +111,7 @@
 
 .table .del-btn	.icon-close
 	fill: $gray
-	opacity: .7			
+	opacity: .7
 
 .counter
 	display: flex
@@ -123,7 +131,7 @@
 		padding: 0 5px
 		color: $gray
 		font-size: 20px
-		line-height: 20px	
+		line-height: 20px
 		background: none
 		border: none
 		margin-bottom: 3px
@@ -136,7 +144,7 @@
 			height: 10px
 
 
-				
+
 
 
 

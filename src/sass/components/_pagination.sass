@@ -1,10 +1,12 @@
 .pagination
+	+sm
+		display: none
 	&__arrow,
 	&__pages,
 	&__page
 		display: inline-block
 		vertical-align: top
-	&__pages 
+	&__pages
 		padding: 0 30px
 	&__arrow,
 	&__page
@@ -12,7 +14,7 @@
 		+f(14px, 400, 30px)
 		letter-spacing: 0.01em
 		transition: color 0.3s, background 0.3s
-		+hover 
+		+hover
 			color: $orange
 	&__arrow
 		position: relative
@@ -30,7 +32,7 @@
 		font-size: 0.72em
 		&_prev
 			left: 0
-		&_next 
+		&_next
 			right: 0
 	&__page
 		padding: 2px
@@ -40,6 +42,6 @@
 		text-align: center
 		&.is-active
 			color: $white
-			background: $orange 
-			+hover 
+			background: $orange
+			+hover
 				color: $white

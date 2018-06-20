@@ -34,3 +34,11 @@ body
 	transition: border-color .3s
 	+hover
 		border-color: $blue
+
+.visible-sm
+	+rmin(768)
+		display: none
+
+.hidden-sm
+	+sm
+		display: none

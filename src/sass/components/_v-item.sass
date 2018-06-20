@@ -3,6 +3,8 @@
 	padding: 15px
 	text-align: center
 	transition: box-shadow 0.3s
+	+sm
+		padding: 0 0 15px
 	+hover
 		box-shadow: 0 0 18px rgba(0, 0, 1, 0.16)
 		.v-item
@@ -14,11 +16,15 @@
 		top: 33px
 		right: 30px
 		transform: translateY(-50%)
+		+sm
+			top: 0
+			right: 50%
+			transform: translate(50%, 0)
 	&__figure
 		display: block
 		height: 197px
 		+vertical
-	&__img 
+	&__img
 		display: inline-block
 		vertical-align: middle
 		max-width: 100%
@@ -29,17 +35,26 @@
 		visibility: hidden
 		+clr
 		transition: opacity 0.3s, visibility 0.3s
+		+xs
+			margin: 10px 0 0
+		+touch
+			opacity: 1
+			visibility: visible
+
 	&__control
 		float: left
 		padding: 0 6px
 		width: 50%
+		+xs
+			width: 100%
+			padding: 0 0 10px
 	&__title
 		margin-bottom: 5px
 		max-height: 2em*1.5
 		color: $dark
 		+f(14px, 400, 1.5)
 		transition: color 0.3s
-		+hover 
+		+hover
 			color: $blue
-	&__price 
+	&__price
 		+f(14px, 700, 30px)

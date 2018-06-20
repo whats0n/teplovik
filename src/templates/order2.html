@@ -4,7 +4,7 @@ title: order2
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
+
 	<div class="main">
 	<!-- Start order -->
 		<div class="order">
@@ -34,7 +34,7 @@ title: order2
 												</div>
 												<div class="error-text">Invalid Field</div>
 											</div>
-											<div class="form__question question js-tooltip" 
+											<div class="form__question question js-tooltip"
 												title="Вы должны ввести пароль">
 												{{ mixins.icon('question') }}
 											</div>
@@ -52,7 +52,7 @@ title: order2
 												</div>
 												<div class="error-text">Invalid Field</div>
 											</div>
-											<div class="form__question question js-tooltip" 
+											<div class="form__question question js-tooltip"
 												title="Вы должны ввести пароль">
 												{{ mixins.icon('question') }}
 											</div>
@@ -70,7 +70,7 @@ title: order2
 												</div>
 												<div class="error-text">Invalid Email</div>
 											</div>
-											<div class="form__question question js-tooltip" 
+											<div class="form__question question js-tooltip"
 												title="Вы должны ввести пароль">
 												{{ mixins.icon('question') }}
 											</div>
@@ -88,7 +88,7 @@ title: order2
 												</div>
 												<div class="error-text">Invalid Field</div>
 											</div>
-											<div class="form__question question js-tooltip" 
+											<div class="form__question question js-tooltip"
 												title="Вы должны ввести пароль">
 												{{ mixins.icon('question') }}
 											</div>
@@ -103,7 +103,7 @@ title: order2
 												<input id="delivery" type="radio" name="get-method" checked>
 												<input id="pickup" type="radio" name="get-method">
 												<span class="form-checkbox__icon"></span>
-											</div>	
+											</div>
 											<label class="form-checkbox__label" for="pickup" class="label">
 												Самовывоз
 											</label>
@@ -122,7 +122,7 @@ title: order2
 													</select>
 												</div>
 											</div>
-											<div class="form__question question js-tooltip" 
+											<div class="form__question question js-tooltip"
 												title="Вы должны ввести свой город">
 												{{ mixins.icon('question') }}
 											</div>
@@ -181,7 +181,8 @@ title: order2
 												<div class="input js-input">
 													<input id="ofice-number" type="text" value="">
 													<label for="ofice-number" class="label">
-														Номер квартиры или офиса *
+														<span class="hidden-sm">Номер квартиры или офиса *</span>
+														<span class="visible-sm">Номер кв. или оф. *</span>
 													</label>
 													<div class="icon-valid">
 														{{ mixins.icon('check') }}
@@ -193,13 +194,14 @@ title: order2
 												</div>
 											</div>
 											<!-- end form-double -->
-										</div>	
+										</div>
 										<!-- begin form-control -->
 										<div class="form-control">
 											<div class="input js-input">
 												<input id="comment" type="text">
 												<label for="comment" class="label">
-													Дополнительные комментарии: код домофона итд
+													<span class="hidden-sm">Дополнительные комментарии: код домофона итд</span>
+													<span class="visible-sm">Код домофона итд</span>
 												</label>
 												<div class="icon-valid">
 													{{ mixins.icon('check') }}
@@ -218,7 +220,8 @@ title: order2
 												<div class="input js-input">
 													<input class="input-checked" id="pay-online" type="radio" name="radio" value="">
 													<label for="pay-online" class="label-radio">
-														Наличные при доставке
+														<span class="hidden-sm">Наличные при доставке</span>
+														<span class="visible-sm">Наличные</span>
 													</label>
 													<div class="icon-valid">
 														{{ mixins.icon('check') }}
@@ -240,7 +243,7 @@ title: order2
 											<!-- end form-control -->
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 							<div class="order__col">
@@ -248,19 +251,22 @@ title: order2
 									<div class="order__main">
 										<div class="order__head">
 											<h3 class="order__form-title">Стоимость заказа</h3>
-											<a href="#" class="order__edit">Редактировать заказ</a>
+											<a href="#" class="order__edit">
+												<span class="hidden-sm">Редактировать заказ</span>
+												<span class="visible-sm">Редактировать</span>
+											</a>
 										</div>
 										<span class="order__total-price">Итого: <strong>24 566 руб</strong></span>
 										<div class="order__main-wrap">
 											<span class="order__delivery">Стоимость доставки: <strong>300 руб</strong></span>
 											<span class="order__delivery-date">Срок доставки: <strong>15.03.18 руб</strong></span>
-											
+
 										</div>
 										<p class="order__text">
 											Уточняющий текст про доставку и оплату и другие нюансы, которые
 											вероятно не так важны, но имеют значение для оформления заказа.
-											К современным системам отопления обычно подходят алюминиевые 
-											или сталеалюминевые (по-другому – биметаллические) батареи. 
+											К современным системам отопления обычно подходят алюминиевые
+											или сталеалюминевые (по-другому – биметаллические) батареи.
 										</p>
 									</div>
 									<div class="order__footer order__footer_padding">
@@ -289,10 +295,12 @@ title: order2
 											</div>
 										</div>
 										<button class="order__btn2 btn btn_blue" type="submit">
-											Перейти к оформлению заказа
+
+											<span class="hidden-sm">Перейти к оформлению заказа</span>
+											<span class="visible-sm">Оформить заказ</span>
 										</button>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 					</form>
@@ -301,6 +309,6 @@ title: order2
 		</div>
 	<!-- Start order -->
 	</div>
-	
+
 
 {% endblock %}

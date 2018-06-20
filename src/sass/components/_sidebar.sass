@@ -1,11 +1,20 @@
 .sidebar
+	+md
+		max-width: 260px
+		margin: 35px auto 45px
+	+sm
+		max-width: 340px
+		padding: 0 10px
+		margin: 25px 0
 	&__checkbox
 		padding: 2px 0
 	&__checkboxes
 		padding-bottom: 26px
-		&_in 
+		&_in
 			display: none
 			padding: 0
+			+md
+				padding-left: 20px
 	&__list
 		padding-top: 20px
 	&__question
@@ -18,7 +27,7 @@
 		background: #e5e5e5
 		+vertical
 		line-height: 1
-		.icon 
+		.icon
 			display: inline-block
 			vertical-align: middle
 			fill: #b5b5b5

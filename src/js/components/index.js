@@ -9,3 +9,5 @@ import './card-slider';
 import './menu';
 import './modal';
 import './scrollto';
+import './filter';
+import './scrollbar';

@@ -2,19 +2,41 @@
 	border-bottom: 1px solid #dcdcdc
 	&__inner
 		display: flex
+		+md
+			flex-direction: column
 	&__sidebar
 		padding: 30px 20px 30px 0
 		border-right: 1px solid #dcdcdc
 		width: 280px
+		+md
+			width: auto
+			padding: 0
+			margin: -1px -15px 0
+			display: none
+		&.is-active
+			display: block
 	&__content
 		padding: 25px 0 45px 20px
 		flex-grow: 1
+		+md
+			padding: 0 0 54px 0
+		+sm
+			padding: 0
+		&.is-hidden
+			display: none
 	&__top
-		+clr 
-		&-left 
+		+clr
+		&-left
 			float: left
-		&-right 
+		&-right
 			float: right
+			+sm
+				float: none
+				width: 100%
+				text-align: center
+		.pagination__pages
+			+xmd
+				padding: 0 15px
 	&__bottom
 		text-align: center
 	&__items
@@ -23,11 +45,21 @@
 		padding-bottom: 40px
 		margin: -10px
 		font-size: 0
+		+sm
+			padding-bottom: 10px
 	&__item
 		display: inline-block
 		vertical-align: top
 		padding: 0 10px
 		width: 33.33%
+		+xmd
+			width: 50%
+			padding-top: 45px
+			padding-bottom: 20px
+		+sm
+			padding-top: 0
+			padding-bottom:  15px
 
 .checkbox_updated
 	padding-left: 30px
+

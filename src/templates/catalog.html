@@ -4,7 +4,7 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
+
 	<div class="catalog">
 		<div class="heading">
 			<div class="inner">
@@ -16,10 +16,18 @@ title: Index page
 		</div>
 		<div class="catalog__main">
 			<div class="inner catalog__inner">
-				<div class="catalog__sidebar">
+				<div class="catalog__sidebar js-catalog-sidebar">
+					<button class="btn-apply js-filter-close"><span class="btn-apply__in">Применить</span></button>
 					{% include 'partials/components/_sidebar.html' %}
+					<button class="btn-apply js-filter-close"><span class="btn-apply__in">Применить</span></button>
 				</div>
-				<div class="catalog__content">
+				<div class="catalog__content js-catalog-content">
+					<div class="btn-filter">
+					<button class="btn-filter__wrapper js-filter-open">
+						{{mixins.icon('filter', 'btn-filter__icon')}}
+							<span class="btn-filter__label">Настроить фильтры</span>
+						</button>
+					</div>
 					<div class="catalog__top">
 						<div class="catalog__top-left">
 							{% include 'partials/components/_pagination.html' %}

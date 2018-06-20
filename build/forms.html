@@ -964,15 +964,17 @@
       <!-- end mobile-menu -->
       <div class="main">
         <div class="inner">
-          <div>
-            <a href="#" class="js-modal-control" data-target="register">Регистрация</a>
-          </div>
-          <div>
-            <a href="#" class="js-modal-control" data-target="login">Войти</a>
-          </div>
-          <div>
-            <a href="#" class="js-modal-control" data-target="password">Восстановление пароля</a>
-          </div>
+          <ul class="forms-list">
+            <li>
+              <a href="#" class="js-modal-control" data-target="register">Регистрация</a>
+            </li>
+            <li>
+              <a href="#" class="js-modal-control" data-target="login">Войти</a>
+            </li>
+            <li>
+              <a href="#" class="js-modal-control" data-target="password">Восстановление пароля</a>
+            </li>
+          </ul>
         </div>
       </div>
       <!-- begin popup -->
@@ -1402,7 +1404,7 @@
       <!-- begin popup -->
       <div class="popup js-modal" data-modal="password">
         <div class="popup__inner js-modal-prevent">
-          <button class="popup__close js-modal-control" data-modal="password" type="button">
+          <button class="popup__close js-modal-control" data-target="password" type="button">
             <svg class="icon icon-close ">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
