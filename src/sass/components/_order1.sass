@@ -1,3 +1,7 @@
+=col($name)
+	&[data-column="#{$name}"]
+		@content
+
 .order
 	font-family: $opensans
 	&__steps
@@ -6,6 +10,9 @@
 		padding-bottom: 15px
 		+sm
 			display: none
+		&_visible
+			+sm
+				display: block
 	&__steps-inner
 		display: flex
 		align-items: center
@@ -19,6 +26,9 @@
 		padding-left: 70px
 		+md
 			padding-left: 60px
+		+sm
+			font-size: 12px
+			padding-left: 40px
 		&:first-child
 			padding-left: 0
 			&::before
@@ -30,6 +40,9 @@
 			content: url(../img/arrow.svg)
 			width: 10px
 			transform: translate(-50%, -50%)
+			+sm
+				width: 8px
+				left: 21px
 	&__step.is-active
 		color: $dark
 	&__footer
@@ -48,70 +61,9 @@
 	&__price
 		color: $dark
 	&__btn
-		padding: 10px 80px 11px
-		min-width: 380px
-
-.table tr
-	border-bottom: 1px solid $inputBorder
-	font-size: 14px
-	text-align: left
-
-.table tr:first-child
-	text-transform: uppercase
-
-.table tr th
-	color: $gray
-	font-weight: 400
-	padding: 55px 0 10px
-
-.table tr:not(:first-child)
-	font-weight: 600
-	font-size: 14px
-	color: $dark
-
-.table tr td
-	text-align: left
-	vertical-align: middle
-	padding: 20px 0
-
-.table tr td:first-child
-	width: 80px
-
-.table tr td:nth-child(2)
-	width: 400px
-	padding-right: 20px
-
-.table tr td:nth-child(3)
-	width: 200px
-	padding-right: 20px
-
-.table tr td:nth-child(4)
-	width: 200px
-	padding-right: 20px
-
-.table tr td:nth-child(5)
-	width: 200px
-	padding-right: 20px
-
-.table tr td:last-child
-	width: 100px
-	text-align: right
-
-.table tr td img
-	width: 60px
-	height: 60px
-
-.table .vendor-code
-	font-weight: 400
-	color: $gray
-
-.table .del-btn
-	background: none
-	border: none
-
-.table .del-btn	.icon-close
-	fill: $gray
-	opacity: .7
+		padding: 10px 10px 11px
+		max-width: 380px
+		width: 100%
 
 .counter
 	display: flex
@@ -144,8 +96,122 @@
 			height: 10px
 
 
-
-
+.table
+	font-size: 0
+	margin-top: 45px
+	+xmd
+		margin-top: 20px
+	+sm
+		margin-top: 0
+	&__thead
+		+sm
+			display: none
+	&__tr
+		border-bottom: 1px solid #dcdcdc
+		position: relative
+		padding-left: 100px
+		padding-right: 35px
+		+xmd
+			padding-right: 25px
+		+sm
+			padding-right: 0
+			padding-left: 60px
+			padding-top: 3px
+			padding-bottom: 8px
+	&__td,
+	&__th
+		display: inline-block
+		vertical-align: middle
+		padding-right: 10px
+		+sm
+			padding-right: 0
+		+col("photo")
+			width: 100px
+			margin-left: -100px
+			+sm
+				margin-left: -60px
+				width: 60px
+		+col("name")
+			width: 38%
+			+xmd
+				width: 41.6%
+			+sm
+				width: 100%
+		+col("price")
+			width: 19.5%
+			+xmd
+				width: 17%
+			+sm
+				display: none
+		+col("qua")
+			width: 20%
+			+xmd
+				width: 25%
+			+sm
+				width: 55%
+		+col("value")
+			width: 22.5%
+			+xmd
+				width: 16.4%
+			+sm
+				width: 45%
+	&__th
+		padding-top: 8px
+		padding-bottom: 8px
+		+f(11px, null, 19px)
+		letter-spacing: 0.150em
+	&__td
+		padding-top: 10px
+		padding-bottom: 10px
+		+sm
+			padding-top: 7px
+			padding-bottom: 7px
+	&__img
+		width: 80px
+		height: 80px
+		+vertical
+		+sm
+			width: 50px
+			height: 50px
+		&-in
+			max-width: 100%
+			max-height: 100%
+			display: inline-block
+			vertical-align: middle
+	&__name-label,
+	&__name-value,
+	&__price,
+	&__value
+		+f(14px, null, 26px)
+		letter-spacing: .01em
+		+sm
+			font-size: 13px
+	&__name
+		+sm
+			padding-right: 32px
+	&__name-value
+		color: rgba($dark, .5)
+	&__value
+		+sm
+			text-align: right
+	&__icon
+		fill: currentColor
+	&__btn
+		position: absolute
+		right: 0
+		top: 50%
+		font-size: 15px
+		color: #4a5d70
+		background: none
+		padding: 10px
+		transform: translateY(-50%)
+		+xmd
+			padding-right: 0
+		+sm
+			font-size: 12px
+			transform: translate(0)
+			top: 8px
+			padding-right: 10px
 
 
 

@@ -1,5 +1,6 @@
 import PerfectScrollbar from 'perfect-scrollbar';
 
-$(window).on('resize', function() {
-  ps.update();
-});
+const watch = [];
+$('.js-scrollbar').each((i, container) => watch.push(new PerfectScrollbar(container)));
+
+$(window).on('resize', () => watch.forEach(ps => ps.update()));
