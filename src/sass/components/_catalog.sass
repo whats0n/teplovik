@@ -1,4 +1,20 @@
 .catalog
+	&.catalog_installers
+		padding-top: 60px
+		.catalog__title
+			+sm
+				text-align: center
+		.catalog__items
+			padding-top: 30px
+			padding-bottom: 45px
+		.catalog__title
+			color: #202020
+		.catalog__item
+			width: 25%
+			+xmd
+				width: 50%
+			+xs
+				width: 100%
 	&__inner
 		display: flex
 		+md
@@ -46,6 +62,11 @@
 		font-size: 0
 		+sm
 			padding-bottom: 10px
+		&.catalog__items_installers
+			padding-top: 20px
+			padding-bottom: 20px
+			.catalog__item
+				padding: 20px 10px
 	&__item
 		display: inline-block
 		vertical-align: top
@@ -53,12 +74,13 @@
 		width: 33.33%
 		+xmd
 			width: 50%
-			padding-top: 45px
+			padding-top: 20px
 			padding-bottom: 20px
 		+sm
 			padding-top: 0
 			padding-bottom:  15px
-
+		+xs
+			width: 100%
 .checkbox_updated
 	padding-left: 30px
 

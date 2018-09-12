@@ -974,6 +974,9 @@
             <li>
               <a href="#" class="js-modal-control" data-target="password">Восстановление пароля</a>
             </li>
+            <li>
+              <a href="#" class="js-modal-control" data-target="request">Отправить заявку</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -1430,6 +1433,92 @@
               <!-- end form-control -->
               <div class="form__buttons">
                 <button class="form__submit btn btn_blue" type="submit">Восстановить пароль</button>
+              </div>
+            </form>
+            <!-- end form -->
+          </div>
+        </div>
+      </div>
+      <!-- end popup -->
+      <!-- begin popup -->
+      <div class="popup js-modal" data-modal="request">
+        <div class="popup__inner js-modal-prevent">
+          <button class="popup__close js-modal-control" data-target="password" type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="popup__request">
+            <div class="popup__title">Отправить заявку</div>
+            <!-- begin form -->
+            <form action="/" class="form">
+              <!-- begin form-control -->
+              <div class="form-control">
+                <div class="input js-input is-valid">
+                  <input id="first-name" type="text" value="Александр">
+                  <label for="first-name" class="label">Имя</label>
+                  <div class="icon-valid">
+                    <svg class="icon icon-check ">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </div>
+                  <div class="error-text">Invalid Field</div>
+                </div>
+              </div>
+              <!-- end form-control -->
+              <!-- begin form-control -->
+              <div class="form-control">
+                <div class="input js-input">
+                  <input id="e-mail" type="text" value="">
+                  <label for="e-mail" class="label">Почта *</label>
+                  <div class="icon-valid">
+                    <svg class="icon icon-check ">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </div>
+                  <div class="error-text">Invalid Email</div>
+                </div>
+              </div>
+              <!-- end form-control -->
+              <!-- begin form-control -->
+              <div class="form-control">
+                <div class="input js-input">
+                  <input id="phone-entity" type="text">
+                  <label for="phone-entity" class="label">Телефон *</label>
+                  <div class="icon-valid">
+                    <svg class="icon icon-check ">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </div>
+                  <div class="error-text">Invalid Field</div>
+                </div>
+              </div>
+              <!-- end form-control -->
+              <!-- begin form-control -->
+              <div class="form-control">
+                <div class="input js-input">
+                  <textarea id="commentary" class="textarea"></textarea>
+                  <label for="commentary" class="label">Комментарий</label>
+                  <div class="icon-valid">
+                    <svg class="icon icon-check ">
+                      <use xlink:href="img/sprite.svg#icon-check"></use>
+                    </svg>
+                  </div>
+                  <div class="error-text">Invalid Field</div>
+                </div>
+              </div>
+              <!-- end form-control -->
+              <!-- begin add-file -->
+              <label class="add-file">
+                <input type="file" class="add-file__input">
+                <svg class="icon icon-clip add-file__icon">
+                  <use xlink:href="img/sprite.svg#icon-clip"></use>
+                </svg>
+                <span class="add-file__title">Прикрепить файл</span>
+              </label>
+              <!-- end add-file -->
+              <div class="form__buttons">
+                <button class="form__submit btn btn_blue" type="submit">Отправить заявку</button>
               </div>
             </form>
             <!-- end form -->

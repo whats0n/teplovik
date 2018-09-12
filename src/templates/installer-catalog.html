@@ -1,0 +1,189 @@
+---
+title: Installer-catalog page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<div class="brands brands_zero">
+		<div class="heading">
+			<div class="inner">
+				{{mixins.bc({
+					list: [ 'Главная', 'Каталог Монтажников']
+				})}}
+				<h2 class="title-lg heading__title">Каталог монтажников</h2>
+			</div>
+		</div>
+		<div class="catalog__main">
+			<div class="inner catalog__inner">
+				<div class="catalog__sidebar js-catalog-sidebar" style="min-width:280px;">
+					<button class="btn-apply js-filter-close"><span class="btn-apply__in">Применить</span></button>
+					<!-- begin sidebar -->
+					<aside class="sidebar">
+						<h3 class="sidebar__subtitle">Вид работ</h3>
+						<ul class="sidebar__checkboxes">
+							{% for item in [
+								{ text: 'Монтаж газовых котлов', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Котлы твердотопливные', classList: 'checkbox_updated' },
+								{ text: 'Монтаж котлов электрических', classList: 'checkbox_updated' },
+								{ text: 'Универсальные котлы', classList: 'checkbox_updated' },
+								{ text: 'Монтаж газовых котлов', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Котлы твердотопливные', classList: 'checkbox_updated' },
+								{ text: 'Монтаж котлов электрических', classList: 'checkbox_updated' },
+								{ text: 'Универсальные котлы', classList: 'checkbox_updated' }
+							] %}
+								<li class="sidebar__checkbox">
+									{{mixins.checkbox(item)}}
+								</li>
+							{% endfor %}
+						</ul>
+
+						<h3 class="sidebar__subtitle">Район</h3>
+						<ul class="sidebar__checkboxes">
+							{% for item in [
+								{ text: 'Красносельский', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Московский', classList: 'checkbox_updated' },
+								{ text: 'Ивановский', classList: 'checkbox_updated' },
+								{ text: 'Петроградская сторона', classList: 'checkbox_updated' },
+								{ text: 'Центр города', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Красная площадь', classList: 'checkbox_updated' },
+								{ text: 'Красных партизан', classList: 'checkbox_updated' },
+								{ text: 'Фрунзенский', classList: 'checkbox_updated' }
+							] %}
+								<li class="sidebar__checkbox">
+									{{mixins.checkbox(item)}}
+								</li>
+							{% endfor %}
+						</ul>
+
+						<h3 class="sidebar__subtitle">Вид работ</h3>
+						<ul class="sidebar__checkboxes">
+							{% for item in [
+								{ text: 'Монтаж газовых котлов', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Котлы твердотопливные', classList: 'checkbox_updated' },
+								{ text: 'Монтаж котлов электрических', classList: 'checkbox_updated' },
+								{ text: 'Универсальные котлы', classList: 'checkbox_updated' },
+								{ text: 'Монтаж газовых котлов', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Котлы твердотопливные', classList: 'checkbox_updated' },
+								{ text: 'Монтаж котлов электрических', classList: 'checkbox_updated' },
+								{ text: 'Универсальные котлы', classList: 'checkbox_updated' }
+							] %}
+								<li class="sidebar__checkbox">
+									{{mixins.checkbox(item)}}
+								</li>
+							{% endfor %}
+						</ul>
+
+						<h3 class="sidebar__subtitle">Район</h3>
+						<ul class="sidebar__checkboxes">
+							{% for item in [
+								{ text: 'Красносельский', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Московский', classList: 'checkbox_updated' },
+								{ text: 'Ивановский', classList: 'checkbox_updated' },
+								{ text: 'Петроградская сторона', classList: 'checkbox_updated' },
+								{ text: 'Центр города', inputAttrs: 'checked', classList: 'checkbox_updated' },
+								{ text: 'Красная площадь', classList: 'checkbox_updated' },
+								{ text: 'Красных партизан', classList: 'checkbox_updated' },
+								{ text: 'Фрунзенский', classList: 'checkbox_updated' }
+							] %}
+								<li class="sidebar__checkbox">
+									{{mixins.checkbox(item)}}
+								</li>
+							{% endfor %}
+						</ul>
+					</aside>
+					<!-- end sidebar -->
+					<button class="btn-apply js-filter-close"><span class="btn-apply__in">Применить</span></button>
+				</div>
+				<div class="catalog__content js-catalog-content">
+					<div class="btn-filter">
+					<button class="btn-filter__wrapper js-filter-open">
+						{{mixins.icon('filter', 'btn-filter__icon')}}
+							<span class="btn-filter__label">Настроить фильтры</span>
+						</button>
+					</div>
+					<div class="catalog__top">
+						<div class="catalog__top-left">
+							{% include 'partials/components/_pagination.html' %}
+						</div>
+						<div class="catalog__top-right">
+							<!-- begin sorting -->
+							<div class="sorting js-sorting">
+								<div class="sorting__label">
+									<div class="sorting__icon">
+										<i></i>
+									</div>
+									<div class="sorting__label-in">Сортировка:</div>
+								</div>
+								<div class="sorting__value js-sorting-control">
+									{{mixins.icon('arrow-down', 'sorting__arrow')}}
+									<div class="sorting__value-in js-sorting-value">По имени</div>
+								</div>
+								<div class="sorting__dropdown js-sorting-dropdown">
+									<div class="sorting__body">
+										<ul class="sorting__list">
+											{% for item in [ 'По имени', 'По виду работ', 'По району', 'Самые популярные' ] %}
+												<li class="sorting__item js-sorting-item" data-value="{{item}}">{{item}}</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end sorting -->
+						</div>
+					</div>
+					<div class="catalog__items catalog__items_installers">
+						{% for item in range(0,2) %}
+							{% for item in [
+								{
+									img: 'installer-1',
+									name: 'Иван Матвеев',
+									title: 'Монтаж газовых котлов'
+								},
+								{
+									img: 'installer-2',
+									name: 'Сергей Авчинских',
+									title: 'Монтаж газовых котлов'
+								},
+								{
+									img: 'installer-3',
+									name: 'Иван Матвеев',
+									title: 'Универсальный монтаж'
+								},
+								{
+									img: 'installer-2',
+									name: 'Иван Матвеев',
+									title: 'Универсальный монтаж'
+								},
+								{
+									img: 'installer-3',
+									name: 'Иван Матвеев',
+									title: 'Монтаж газовых котлов'
+								},
+								{
+									img: 'installer-1',
+									name: 'Сергей Авчинских',
+									title: 'Монтаж котлов электрических'
+								}
+							] %}
+								<div class="catalog__item">
+									<div class="l-item">
+										<div class="l-item__inner">
+											<a href="#" class="l-item__figure" style="background-image: url('img/installers/{{item.img}}.png');"></a>
+											<a href="#" class="l-item__name">{{item.name}}</a>
+											<div class="l-item__title">{{item.title}}</div>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+						{% endfor %}
+					</div>
+					<div class="catalog__bottom">
+						{% include 'partials/components/_pagination.html' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

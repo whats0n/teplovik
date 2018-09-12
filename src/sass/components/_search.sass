@@ -1,4 +1,12 @@
 .search
+	position: relative
+	.table
+		margin-top: 0
+
+	&.is-show
+		.search__container
+			opacity: 1
+			display: block
 	+xmd
 		margin-top: 10px
 	+sm
@@ -47,3 +55,59 @@
 		font-size: 21px
 		+sm
 			font-size: 16px
+	&__category
+		padding-bottom: 34px
+		border-bottom: 1px solid $lightgray
+		font-size: 0
+		&-item
+			display: inline-block
+			&:not(:last-child)
+				margin-right: 50px
+				margin-bottom: 30px
+		&-link
+			color: $dark
+			+f(14px, 400, 18px)
+			transition: color .3s
+			+hover
+				color: $blue
+	&__container
+		display: none
+		position: absolute
+		top: 100%
+		left: 0
+		right: 0
+		z-index: 10
+		padding: 30px 20px 45px
+		background-color: $white
+		box-shadow: 0 4px 27px rgba(0,0,0,.14)
+		transform: translateY(10px)
+		&-row
+			&:not(:last-child)
+				margin-bottom: 30px
+		&-subtitle
+			margin-bottom: 25px
+			color: $dark
+			+f(17px, 700, null)
+	&__brands
+		font-size: 0
+		margin: 0 -10px
+		&-item
+			display: inline-block
+			background-color: $lightgray
+			vertical-align: top
+			margin: 0 10px
+			width: 20%
+			max-width: 175px
+		&-box
+			text-decoration: none
+			cursor: pointer
+			display: block
+			text-align: center
+		&-figure
+			height: 50px
+			+vertical
+		&-img
+				display: inline-block
+				vertical-align: middle
+				mix-blend-mode: multiply
+				max-height: 30px

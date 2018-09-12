@@ -10,3 +10,5 @@ PageList:
 - file: catalog.html
 - file: product.html
 - file: contacts.html
+- file: installer.html
+- file: installer-catalog.html

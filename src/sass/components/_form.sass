@@ -2,6 +2,21 @@
 	position: relative
 	&:not(:first-child)
 		margin-top: 9px
+.textarea
+	resize: none
+	border-radius: 4px 0 0 4px
+	padding: 19px 25px 4px 14px
+	width: 100%
+	color: #0f2841
+	font-family: $familyOpensans
+	font-size: 14px
+	font-weight: 400
+	border: 1px solid $inputBorder
+	border-radius: 4px
+	&:focus
+		& ~ .label
+			font-size: 11px
+			transform: translateY(-7px)
 .input
 	position: relative
 	&:before

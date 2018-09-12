@@ -155,6 +155,10 @@
 				width: 16.4%
 			+sm
 				width: 45%
+		+col("category")
+			width: 39%
+			+sm
+				width: 100%
 	&__th
 		padding-top: 8px
 		padding-bottom: 8px
@@ -167,6 +171,7 @@
 			padding-top: 7px
 			padding-bottom: 7px
 	&__img
+		display: block
 		width: 80px
 		height: 80px
 		+vertical
@@ -186,11 +191,23 @@
 		letter-spacing: .01em
 		+sm
 			font-size: 13px
+	&__name-label
+		display: block
+		color: $dark
+		transition: color .3s
+		+hover
+			color: $blue
 	&__name
 		+sm
 			padding-right: 32px
 	&__name-value
 		color: rgba($dark, .5)
+	&__link
+		text-decoration: none
+		color: $dark
+		transition: color .3s
+		+hover
+			color: $blue
 	&__value
 		+sm
 			text-align: right

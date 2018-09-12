@@ -1,10 +1,156 @@
 <!-- begin search -->
-<div class="search">
+<div class="search is-show">
 	<form action="/" class="search__form">
 		<input type="text" class="search__input" placeholder="Поиск, например, газовые котлы">
 		<button class="search__btn">
 			{{mixins.icon('search', 'search__icon')}}
 		</button>
 	</form>
+	<div class="search__container">
+		<div class="search__container-row">
+			<h3 class="search__container-subtitle">Товары</h3>
+			<!-- begin table -->
+			<div class="table">
+				{% set titles = [
+					{ column: 'photo'},
+					{ column: 'name'},
+					{ column: 'price'},
+					{ column: 'price'},
+					{ column: 'price'}
+				] %}
+				<div class="table__tbody">
+					{% set table = [
+						{
+							cols: [
+								{
+									column: 'photo',
+									img: 'product1.png'
+								},
+								{
+									column: 'name',
+									name: {
+										label: 'Угольник для радиаторов 1/2',
+										value: 'Артикул:B1HCD43'
+									}
+								},
+								{
+									column: 'price',
+									price: '6 599 руб'
+								},
+								{
+									column: 'category',
+									value: 'В категории:'
+								}
+							]
+						},
+						{
+							cols: [
+								{
+									column: 'photo',
+									img: 'product1.png'
+								},
+								{
+									column: 'name',
+									name: {
+										label: 'Угольник для радиаторов 1/2',
+										value: 'Артикул:B1HCD43'
+									}
+								},
+								{
+									column: 'price',
+									price: '6 599 руб'
+								},
+								{
+									column: 'category',
+									value: 'В категории:'
+								}
+							]
+						},
+						{
+							cols: [
+								{
+									column: 'photo',
+									img: 'product1.png'
+								},
+								{
+									column: 'name',
+									name: {
+										label: 'Угольник для радиаторов 1/2',
+										value: 'Артикул:B1HCD43'
+									}
+								},
+								{
+									column: 'price',
+									price: '6 599 руб'
+								},
+								{
+									column: 'category',
+									value: 'В категории:'
+								}
+							]
+						}
+					] %}
+					{% for item in table %}
+						<div class="table__tr">
+							{% for item in item.cols %}
+								<div class="table__td" data-column="{{item.column}}">
+									{% if item.img %}
+										<a href="#" class="table__img"><img src="img/{{item.img}}" class="table__img-in" alt="image"></a>
+									{% endif %}
+									{% if item.name %}
+										<div class="table__name">
+											<a href="#" class="table__name-label">{{item.name.label}}</a>
+											<div class="table__name-value">{{item.name.value}}</div>
+										</div>
+									{% endif %}
+									{% if item.price %}
+										<div class="table__price"><strong>{{item.price}}</strong></div>
+									{% endif %}
+									{% if item.value %}
+										<div class="table__name-value">{{item.value}} <a href="#" class="table__link">Радиаторы</a>  /  <a href="#" class="table__link">Аксессуары для радиаторов</a></div>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<!-- end table -->
+		</div>
+		<div class="search__container-row">
+			<h3 class="search__container-subtitle">Категории</h3>
+			<ul class="search__category">
+				{% for item in [
+					{link: 'Регулирующая арматура'},
+					{link: 'Котельное оборудование'},
+					{link: 'Расходные материалы'},
+					{link: 'Водонагреватели и бойлеры'},
+					{link: 'Контрольно-измерительная арматура'}
+				] %}
+				<li class="search__category-item">
+					<a href="#" class="search__category-link">{{item.link}}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="search__container-row">
+			<h3 class="search__container-subtitle">Бренды</h3>
+			<ul class="search__brands">
+				{% for item in [
+					{brand: 'rifar'},
+					{brand: 'baxi'},
+					{brand: 'viessmann'},
+					{brand: 'buderus'},
+					{brand: 'uni-fitt'}
+				] %}
+					<li class="search__brands-item">
+						<a href="#" class="search__brands-box">
+							<div class="search__brands-figure"><img class="search__brands-img" src="/img/brands/brand-{{item.brand}}.png" alt="{{item.brand}}"></div>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 </div>
 <!-- end search -->
