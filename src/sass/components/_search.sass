@@ -90,24 +90,29 @@
 			+f(17px, 700, null)
 	&__brands
 		font-size: 0
-		margin: 0 -10px
+		margin: -10px
 		&-item
 			display: inline-block
-			background-color: $lightgray
 			vertical-align: top
-			margin: 0 10px
+			padding: 10px
 			width: 20%
-			max-width: 175px
+			max-width: 195px
+			+xs
+				width: 33.33%
 		&-box
 			text-decoration: none
 			cursor: pointer
 			display: block
+			background-color: $lightgray
+			padding: 10px
 			text-align: center
 		&-figure
 			height: 50px
+			padding: 10px
 			+vertical
 		&-img
 				display: inline-block
 				vertical-align: middle
 				mix-blend-mode: multiply
-				max-height: 30px
+				max-height: 100%
+				max-width: 100%

@@ -19,9 +19,12 @@
 		+sm
 			display: none
 	&__btn
+		position: relative
 		display: inline-block
 		vertical-align: top
 		margin: 5px
+		+xmd
+			position: static
 	&__actions
 		float: right
 		padding: 10px 0 1px
@@ -104,83 +107,177 @@
 	position: absolute
 	z-index: 700
 	top: 100%
-	left: 50%
-	overflow: auto
-	width: 100%
-	// min-width: 1600px
-	max-height: calc(100vh - 99px)
+	left: 0
+	width: 310px
+	height: calc(100vh - 109px)
+	margin-top: 10px
+	background: $white
 	opacity: 0
 	visibility: hidden
-	box-shadow: 0 4px 27px rgba(0, 0, 0, 0.14)
-	transform: translate3d(-50%,0,0)
 	transition: opacity 0.3s, visibility 0.3s
+	box-shadow: 0 4px 27px rgba(0, 0, 0, 0.14)
 	+xl
-		max-height: calc(100vh - 60px)
+		height: calc(100vh - 70px)
+	+xmd
+		height: calc(100vh - 61px)
+		width: 50%
+		margin: 0
 	+sm
-		position: relative
 		display: none
-		padding: 20px 10px
-		max-height: none
-		opacity: 1
-		visibility: visible
+		position: static
+		width: 100%
+		height: auto
+		margin-top: 0
 		box-shadow: none
-		text-align: left
 	&.is-open
 		opacity: 1
 		visibility: visible
+		+sm
+			display: block
 	&__container
+		padding: 15px 0
+		overflow: auto
+		height: 100%
 		background: $white
+		+sm
+			position: relative
+			padding: 0
+			margin-top: 40px
+			height: auto
+	&__inner
+		display: flex
+		height: 100%
+		flex-direction: column
+		box-shadow: 0 4px 27px rgba(0, 0, 0, 0.14)
+	&__popup
+		position: absolute
+		background: $white
+		top: 0
+		bottom: 0
+		left: 100%
+		z-index: -1
+		width: 100%
+		height: 100%
+		opacity: 0
+		visibility: hidden
+		transition: opacity .24s, visibility .24s
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			width: 1px
+			height: 100%
+			background: $borderGray
 	&__list
 		clear: both
-		margin: 0 -10px
 		font-size: 0
-		+supports(column-count, 6)
-			column-count: 6
-			+md
-				column-count: 4
-			+xmd
-				column-count: 3
-			+sm
-				column-count: 2
-			+xs
-				column-count: 1
-	&__box
-		position: relative
-		display: inline-block
-		vertical-align: top
-		padding: 19px 10px
-		width: (100%/6)
-		+md
-			width: (100%/4)
-		+xmd
-			width: (100%/3)
-		+sm
-			width: (100%/2)
-		+xs
-			width: 100%
-			text-align: center
-		+supports(column-count, 6)
-			display: list-item
-			width: auto !important
-			break-inside: avoid-column
-	&__title
-		display: block
-		margin-bottom: 12px
-		color: inherit
-		+f(13px, 700, 18px)
-		letter-spacing: 0.01em
-		transition: color 0.3s
-		+hover
-			color: $blue
 	&__link
+		position: relative
 		display: block
-		padding: 4px 0
 		color: inherit
-		+f(13px, 400, 1.25)
+		padding: 5px 35px 5px 20px
+		+f(14px, 400, 18px)
 		letter-spacing: 0.01em
 		transition: color 0.3s
 		+hover
 			color: $blue
+			.menu__icon
+				&:before
+					opacity: 1
+				&-in
+					opacity: 0
+	&__box
+		+hover
+			.menu__popup
+				opacity: 1
+				visibility: visible
+		&.is-active
+			.menu
+				&__popup
+					opacity: 1
+					visibility: visible
+				&__title
+					color: $blue
+				&__icon
+					+sm
+						transform: rotate(270deg) translateY(2px)
+					&:before
+						opacity: 1
+					&-in
+						opacity: 0
+				&__accordion
+					display: block
+	&__title
+		padding-right: 20px
+	&__icon
+		position: absolute
+		right: 19px
+		top: 8px
+		font-size: 13px
+		+sm
+			top: 5px
+			transform: rotate(90deg)
+			transition: transform .3s
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			+arr(7, 13, #0ca9fd, r)
+			opacity: 0
+			transition: opacity .3s
+			+sm
+				left: 1px
+				top: 1px
+		&-in
+			fill: #c5c5c5
+			transition: opacity .3s
+	&__submenu
+		padding: 15px 0
+		flex-grow: 1
+		overflow: auto
+		+sm
+			overflow: visible
+			padding: 5px 0
+	&__accordion
+		+sm
+			display: none
+	&__brand
+		flex-shrink: 0
+		text-align: center
+		padding: 25px 30px 2px
+		background-image: linear-gradient(29deg, #00ab89 0%, #3affd3 100%)
+		display: block
+		+sm
+			padding: 10px 10px 5px
+			max-width: 360px
+			margin: 0 auto 15px
+		&-label
+			color: $white
+			+f(16px, 700, 1.875)
+			height: 3.75em
+			overflow: hidden
+			+sm
+				+f(14px, null, 1.429)
+				height: 2.858em
+		&-logo
+			font-size: 0
+			height: 130px
+			text-align: center
+			+sm
+				height: 100px
+			&:before
+				content: ""
+				width: 0
+				height: 100%
+				display: inline-block
+				vertical-align: middle
+		&-img
+			max-width: 100%
+			max-height: 100%
+			display: inline-block
+			vertical-align: middle
 
 .btn-nav
 	position: absolute
