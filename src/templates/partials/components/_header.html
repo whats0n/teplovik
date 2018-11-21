@@ -103,12 +103,12 @@
 									list: [ 'Для труб из сшитого ', 'Фитинги резьбовые', 'Фитинги для коллекторов' ]
 								}
 							] %}
-								<li class="menu__box">
-									<a href="#" class="menu__title menu__link">
+								<li class="menu__box js-menu-item">
+									<a href="#" class="menu__title menu__link js-menu-link">
 										{{item.title | safe}}
 										<span class="menu__icon">{{mixins.icon('arrow-right', 'menu__icon-in')}}</span>
 									</a>
-									<div class="menu__popup">
+									<div class="menu__popup js-menu-submenu">
 										<div class="menu__inner">
 											<ul class="menu__submenu">
 												{% for item in item.list %}
@@ -276,12 +276,12 @@
 									list: [ 'Маты', 'Кабели', 'Термостаты', 'Комплектация для водяного ТП' ]
 								}
 							] %}
-								<li class="menu__box">
-									<a href="#" class="menu__title menu__link">
+								<li class="menu__box js-menu-item">
+									<a href="#" class="menu__title menu__link js-menu-link">
 										{{item.title | safe}}
 										<span class="menu__icon">{{mixins.icon('arrow-right', 'menu__icon-in')}}</span>
 									</a>
-									<div class="menu__accordion">
+									<div class="menu__accordion js-menu-submenu">
 										<ul class="menu__submenu">
 											{% for item in item.list %}
 												<li class="menu__item">

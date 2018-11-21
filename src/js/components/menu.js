@@ -1,6 +1,8 @@
 import { OPEN, ACTIVE } from '../constants';
 
 const controls = $('.js-menu-control');
+const submenus = $('.js-menu-submenu');
+const links = $('.js-menu-link');
 const containers = $('.js-menu');
 let active = false;
 
@@ -32,4 +34,21 @@ $(document).on('click', e => {
   if (!active || target.closest(controls).length || target.closest(containers).length) return;
   controls.removeClass(ACTIVE);
   containers.removeClass(OPEN);
+});
+
+const boxes = $('.js-menu-item');
+
+boxes.each((i, container) => {
+  container = $(container);
+  const link = container.find('.js-menu-link');
+  link.on('click', e => {
+    e.preventDefault();
+    if (!container.hasClass(ACTIVE)) {
+      boxes.removeClass(ACTIVE);
+      container.addClass(ACTIVE);
+    } else {
+      container.removeClass(ACTIVE);
+    }
+    active = !active;
+  });
 });
