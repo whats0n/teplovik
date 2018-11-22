@@ -123,6 +123,7 @@
 	+xmd
 		max-height: calc(100vh - 61px)
 		// width: 50%
+		left: -100px
 		margin: 0
 	+sm
 		display: none
@@ -136,6 +137,16 @@
 		visibility: visible
 		+sm
 			display: block
+	&_brands
+		left: -215px
+		width: 1240px
+		+xl
+			width: 1000px
+		+md 
+			width: 800px
+		+xmd 
+			left: -215px
+			width: 600px
 	&__container
 		flex-grow: 1
 		flex-basis: 100%
@@ -172,9 +183,64 @@
 			width: 1px
 			height: 100%
 			background: $borderGray
+	&__section
+		padding: 20px 0
+	&__brands
+		padding: 0 20px 30px
+		border-bottom: 1px solid #dcdcdc
+		font-size: 0
+	&__brands-item
+		display: inline-block
+		vertical-align: top
+		padding: 10px
+		width: (100%/6)
+		+md
+			width: (100%/3)
+		+xs
+			width: (100%/2)
+	&__brands-box
+		display: block
+		height: 115px
+		background: #efefef
+		+vertical
+	&__brands-img
+		display: inline-block
+		vertical-align: middle
+		max-width: 80%
+		max-height: 80%
+		mix-blend-mode: multiply
 	&__list
 		clear: both
 		font-size: 0
+		&_columns
+			padding: 0 10px
+			+supports (column-count, 6)
+				column-count: 6
+				+xl
+					column-count: 4
+				+md
+					column-count: 3
+				+xs
+					column-count: 2
+			.menu__box
+				display: inline-block
+				vertical-align: top
+				width: 100%/6
+				+supports (column-count, 6)
+					display: block !important
+					width: 100% !important
+				+xl
+					width: 100%/4
+				+md
+					width: 100%/3
+				+xs
+					width: 100%/2
+	&__title-main
+		padding: 0 30px 20px
+		color: $dark
+		+f(17px, 700, null)
+		letter-spacing: 0.025em
+		text-transform: uppercase
 	&__link
 		position: relative
 		display: block

@@ -125,13 +125,51 @@
 									</div>
 								</li>
 							{% endfor %}
-
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="header__btn">
-				<button class="btn btn_blue">Бренды</button>
+				<button class="btn btn_blue js-menu-control" data-target="brand">Бренды</button>
+				<div class="menu menu_brands js-menu" data-container="brand">
+					<div class="menu__container">
+						<div class="menu__section">
+							<h3 class="menu__title-main">популярные бренды</h3>
+							<ul class="menu__brands">
+								{% for item in [
+									{brand: 'rifar'},
+									{brand: 'baxi'},
+									{brand: 'viessmann'},
+									{brand: 'buderus'},
+									{brand: 'uni-fitt'},
+									{brand: 'rifar'},
+									{brand: 'baxi'},
+									{brand: 'viessmann'},
+									{brand: 'buderus'},
+									{brand: 'uni-fitt'},
+									{brand: 'buderus'},
+									{brand: 'uni-fitt'}
+								] %}
+									<li class="menu__brands-item">
+										<a href="#" class="menu__brands-box"><img class="menu__brands-img" src="img/brands/brand-{{item.brand}}.png" alt="{{item.brand}}"></a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+						<div class="menu__section">
+							<h3 class="menu__title-main">все бренды</h3>
+							<ul class="menu__list menu__list_columns">
+								{% for item in range(0,66) %}
+									<li class="menu__box">
+										<a href="#" class="menu__title menu__link">
+											menu item {{loop.index}}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="header__btn">
 				<button class="btn btn_orange">Акции</button>
@@ -185,7 +223,7 @@
 				<button class="btn btn_blue mobile-menu__btn-control js-menu-control" data-target="mobile-catalog">Каталог</button>
 			</div>
 			<div class="mobile-menu__btn">
-				<button class="btn btn_blue mobile-menu__btn-control">Бренды</button>
+				<button class="btn btn_blue mobile-menu__btn-control js-menu-control" data-target="mobile-brand">Бренды</button>
 			</div>
 			<div class="mobile-menu__btn">
 				<button class="btn btn_orange mobile-menu__btn-control">Акции</button>
@@ -294,6 +332,45 @@
 											 <div class="menu__brand-label">Официальный дилер Rehau</div>
 										</a>
 									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="menu menu_brands js-menu" data-container="mobile-brand">
+				<div class="menu__container">
+					<div class="menu__section">
+						<h3 class="menu__title-main">популярные бренды</h3>
+						<ul class="menu__brands">
+							{% for item in [
+								{brand: 'rifar'},
+								{brand: 'baxi'},
+								{brand: 'viessmann'},
+								{brand: 'buderus'},
+								{brand: 'uni-fitt'},
+								{brand: 'rifar'},
+								{brand: 'baxi'},
+								{brand: 'viessmann'},
+								{brand: 'buderus'},
+								{brand: 'uni-fitt'},
+								{brand: 'buderus'},
+								{brand: 'uni-fitt'}
+							] %}
+								<li class="menu__brands-item">
+									<a href="#" class="menu__brands-box"><img class="menu__brands-img" src="img/brands/brand-{{item.brand}}.png" alt="{{item.brand}}"></a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="menu__section">
+						<h3 class="menu__title-main">все бренды</h3>
+						<ul class="menu__list menu__list_columns">
+							{% for item in range(0,66) %}
+								<li class="menu__box">
+									<a href="#" class="menu__title menu__link">
+										menu item {{loop.index}}
+									</a>
 								</li>
 							{% endfor %}
 						</ul>
